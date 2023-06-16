@@ -1,11 +1,13 @@
-import './App.css'
+import './App.css';
+
+import AppRoot from './components/AppRoot';
 
 function App() {
-  return (
-    <div className="App">
-        present dans le app
-    </div>
-  );
+	return (
+		<div className="App">
+			<AppRoot />
+		</div>
+	);
 }
 
 export default App;

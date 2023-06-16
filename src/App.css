@@ -1,9 +1,11 @@
 :root {
+  --gold:#EAB107;
+  gold-sombre: #A48B31;
   --yellow-first: #9ACD32;
-  --vert: #7AD865;
-  --bleu: #4483D6;
+  --vert: #51C124;
+  --bleu: #0090B5;
   --orange: #F4BB35;
-  --rouge: #FF665B;
+  --rouge: #D32A2F;
   --yellow-linear: linear-gradient(180deg, #F8D49A -146.42%, #FAD79D -46.42%);
   --black: #242d49;
   --gray: #788097;
@@ -17,4 +19,53 @@
 *{
   padding: 0;
   margin: 0;
+}
+
+
+.menu{
+  transform: translateX(-100%);
+}
+
+/* @keyframes wiggle{
+  0%{
+    transform: translateX(-100%);
+    opacity: 0}
+  100%{
+    opacity: 1;
+    transform: translateX(100%);
+  }
+} */
+.show{
+  animation: visible .5s ease-in-out forwards;
+}
+
+
+
+@keyframes visible{
+  0%{
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes invisible{
+  0%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100%{
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .menu{
+    margin-top: 15px;
+    transform: translateX(0);
+  }
 }

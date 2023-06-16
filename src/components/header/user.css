@@ -1,0 +1,47 @@
+.user-button {
+  /* border: 1px solid #000; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  width: 5vh;
+  padding: 0.5%; */
+  /* background: var(--transparent); */
+  /* border-radius: 50%; */
+}
+.user-button.connected {
+  background: var(--red);
+}
+.menu-text {
+    display: flex;
+    align-items: center;
+    color: var(--night-blue);
+    font-size: 1.1em;
+    font-weight: 500;
+}
+.text-list{
+  color: var(--night-blue);
+  /* display: none; */
+  font-size: 1.1em;
+  font-weight: 500;
+  transform: translate(-150px,5px);
+}
+.text-us{
+  width: 15px;
+  height: 15px;
+  font-weight: 700;
+  line-height: 0px;
+  font-size: 19px;
+  transform: translate(-1px,0px);
+  border: 2px solid #cc1616;
+  border-radius: 50%;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .user {
+  /* border: 1px solid #000; */
+}
+

@@ -1,0 +1,71 @@
+
+.notfound .error {
+    display: flex;
+    flex-flow: row wrap;
+    width: 900px;
+    height: 50vh;
+    margin: 20vh auto;
+  }
+  .notfound .first {
+    /* display: inline-block; */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    width: 30%;
+    height: 90%;
+  }
+  .notfound .image {
+    width: 40vh;
+    height: 40vh;
+    border-radius: 50%;
+    background-color: var(--berge);
+    background-image: url("./emoji.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .notfound .second {
+    /* display: inline-block; */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 65%;
+    height: 90%;
+    margin-left: 3%;
+    vertical-align: top;
+  }
+  .notfound h1 {
+    font-family: nunito, sans-serif;
+    font-size: 65px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--night-blue);
+    text-transform: uppercase;
+  }
+  .notfound h3 {
+    font-family: nunito, sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--night-blue);
+    text-transform: uppercase;
+  }
+  .notfound p {
+    width: 60%;
+    font-family: nunito, sans-serif;
+    color: var(--transparent2);
+    font-weight: 400;
+  }
+  .notfound span {
+    font-family: nunito, sans-serif;
+    display: inline-block;
+    font-weight: 700;
+    border-radius: 40px;
+    text-decoration: none;
+    color: var(--red);
+    cursor: pointer;
+  }
+  
