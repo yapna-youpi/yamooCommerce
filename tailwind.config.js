@@ -6,6 +6,8 @@ module.exports = {
     extend: {
       colors: {
         darker: '#1F1F21',
+        marron: "#b26541",
+        bleur: "#00A7EB"
       },
       keyframes: {
         wiggle: {
@@ -18,5 +20,4 @@ module.exports = {
       }
     },
   },
-  plugins: [],
 }

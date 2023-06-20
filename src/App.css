@@ -7,23 +7,43 @@
   --orange: #F4BB35;
   --rouge: #D32A2F;
   --yellow-linear: linear-gradient(180deg, #F8D49A -146.42%, #FAD79D -46.42%);
-  --black: #242d49;
+  --black: #141E30;
   --gray: #788097;
+  --night-blue: #0f394c;
   --purple: linear-gradient(180deg, #BB67FF 0%, #C484F3 100%);
   --pink: #FF919D;
   --glass: rgba(255, 255, 255, 0.54);
   --boxShadow: 0px 19px 60px rgb(0 0 0 / 8%);
   --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
   --activeItem: #f799a354;
+  --blue-theme: #00A7EB;
+  --maron-theme: #b26541;
 }
 *{
   padding: 0;
   margin: 0;
 }
+.home{
+  background: url("./components/home/assets/bg.jpg");
+  background-size: cover;
+}
 
-
-.menu{
+.header-top{
+    background: #141E30;
+  background: -webkit-linear-gradient(to right, #243B55, #141E30);
+  background: linear-gradient(to left, #243B55, #141E30, #141E30);
+}
+.header ul li{
+  cursor: pointer;
+}
+.menu {
   transform: translateX(-100%);
+  background: #141E30;
+  background: -webkit-linear-gradient(to right, #243B55, #141E30);
+  background: linear-gradient(to right, #243B55, #141E30);
+
+  /* background-image: url("./components//header//assets/bg-logo.png"); */
+  background-size: cover;
 }
 
 /* @keyframes wiggle{
@@ -36,8 +56,48 @@
   }
 } */
 .show{
+  position: fixed;
   animation: visible .5s ease-in-out forwards;
 }
+
+/*--styling newsletter*/
+.newsletter{
+  /* background: url('../'); */
+  z-index: 1;
+}
+.newsletter-policy{
+  display: table;
+  margin: 32px auto 0; 
+}
+.newsletter input[type=checkbox]{
+  border-color: #E3DBD9!important;
+}
+
+/*--styling footer--*/
+.footer-content{
+  background: #141E30;
+  background: -webkit-linear-gradient(to right, #243B55, #141E30);
+  background: linear-gradient(to left, #243B55, #141E30, #141E30);
+}
+.footer-bottom{
+  border-top: 2px solid #85899730;
+}
+.footer-list3>p:hover{
+  color: var(--blue-theme);
+  text-decoration: underline;
+  cursor: default ;
+}
+.footer-list2>li:hover{
+  color: var(--blue-theme);
+  text-decoration: underline;
+  cursor: default ;
+}
+.footer-list4>p:hover{
+  color: var(--blue-theme);
+  text-decoration: underline;
+  cursor: default ;
+}
+
 
 
 
@@ -65,7 +125,14 @@
 
 @media only screen and (min-width: 768px) {
   .menu{
-    margin-top: 15px;
+    /* margin-top: 15px; */
     transform: translateX(0);
+    background-image: none;
+  }
+  .logo-polar{
+    max-width: 35%;
+    position: absolute;
+    top: 0;
+    left: 40%;
   }
 }

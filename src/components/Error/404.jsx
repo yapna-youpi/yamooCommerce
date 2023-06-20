@@ -1,5 +1,10 @@
+import React from 'react'
+import {useHistory} from 'react-router-dom'
 import './404.css'
+
+
 function Error() {
+    let H = useHistory()
     return (
         <div id="notfound" className="notfound">
             <div id="error">
@@ -9,11 +14,11 @@ function Error() {
                     </div>
                     <div class="second">
                         <h1>404</h1>
-                        <h3>OOPS! SOMETHING WENT WRONG</h3>
+                        <h3>OOPS ! QUELQUE CHOSE S'EST MAL PASSÉ</h3>
                         <p>
-                            Sorry but the page you are looking for don't exist
+                            Désolé, la page que vous recherchez n'existe pas.
                         </p>
-                        <span  >Back to home page</span>
+                        <span onClick={()=>H.push("/")} className='error-link' >Retour à la page d'accueil</span>
                     </div>
                 </div>
             </div>

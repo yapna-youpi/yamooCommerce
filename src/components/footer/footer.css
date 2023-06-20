@@ -1,27 +1,5 @@
-footer {
-    padding: 10px;
-    text-align: center;
-    background: var(--berge);
-}
-
-.footer span {
-    color: var(--red);
-}
-.footer button {
-    font-size: 0,8em;
-    color: var(--night-blue);
-    border: none;
-    background-color: var(--no-value);
-}
-.footer .logo{
-    cursor: pointer;
-}
-
-@media screen and (min-width: 768px) {
-    footer {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-around;
-        align-items: center;
-    }
+.footer-bottom{
+    background: #141E30;
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);
+    background: linear-gradient(to left, #243B55, #141E30, #141E30);
 }

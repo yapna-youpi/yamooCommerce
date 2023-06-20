@@ -6,6 +6,9 @@ import { Helmet } from "react-helmet";
 import './home.css'
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
+import Hero from './hero/Hero';
+import Newsletter from './newsletter/Newsletter';
+
 
 
 function Home() {
@@ -18,7 +21,8 @@ function Home() {
 
     return (
         <div className='home'>
-            
+            <Hero />
+            <Newsletter  />
         </div>
     )
 }

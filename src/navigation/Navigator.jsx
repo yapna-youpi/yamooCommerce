@@ -6,6 +6,7 @@ import './main.css'
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import Home from '../components/home/Home';
+import Boutique from '../components/boutique/Boutique';
 import Error from '../components/Error/404';
 
 function Main({ User, Country }) {
@@ -22,6 +23,7 @@ function Main({ User, Country }) {
                 <Switch>
                     <Route path='/' exact component={Home} />
                     <Route path='/home' exact component={Home} />
+                    <Route path='/librairie' exact component={Boutique} />
                     <Route path='*' component={Error} />
                 </Switch>
                 <Footer />
