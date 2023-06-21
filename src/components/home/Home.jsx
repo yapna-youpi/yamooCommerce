@@ -8,6 +8,9 @@ import Header from '../header/Header';
 import Footer from '../footer/Footer';
 import Hero from './hero/Hero';
 import Newsletter from './newsletter/Newsletter';
+import More from "./slider1/Banner"
+import Slide from '../../info.json'
+import Aside from './aside/Aside';
 
 
 
@@ -20,8 +23,10 @@ function Home() {
     }, [])
 
     return (
-        <div className='home'>
+        <div className='home '>
             <Hero />
+            <More slides={Slide} />
+            <Aside />
             <Newsletter  />
         </div>
     )

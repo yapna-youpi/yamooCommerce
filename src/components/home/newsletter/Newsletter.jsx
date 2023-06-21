@@ -3,7 +3,7 @@ import {UilTelegramAlt} from '@iconscout/react-unicons'
 
 function Newsletter() {
   return (
-    <div className='newsletter sm:h-20 md:h-96 flex justify-center items-center'>
+    <div className='newsletter sm:h-20 md:h-96 flex justify-center items-center md:mt-10'>
         <div className="newsletter-content text-maron ">
             <div className="newsletter-ico text-white my-5">
                 <i className='testicon mx-auto h-9 w-9 rounded-full bg-marron flex justify-center items-center pr-1 text-2xl '><UilTelegramAlt/></i>

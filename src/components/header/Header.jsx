@@ -37,7 +37,7 @@ console.log(choseImage())
     <div className="header ">
       <div className="header-top w-full  bg-darker text-white md:rounded-b-3xl  py-2 px-5 md:relative md:px-10 flex justify-between items-center ">
         <nav className="md:w-5/12 ">
-          <div className="logo">
+          <div className="logo md:h-16 md:-translate-y-5">
             <img
               className=""
               src={choseImage ? Logo : MobileLogo}
@@ -48,7 +48,7 @@ console.log(choseImage())
           <div
             id="menu"
             ref={menuref}
-            className="menu flex h-screen pt-28 md:pt-0  md:h-10 fixed z-40 top-0 left-0  justify-center mx-auto  ml-0 md:relative w-full text-white bg-darker 
+            className="menu flex h-screen pt-28 md:pt-0  md:h-10 fixed z-40 top-0 left-0 md:-translate-y-1  justify-center mx-auto  ml-0 md:relative w-full text-white bg-darker 
                                 hover:bg-contain md:bg-inherit py-7 md:py-0 px-15"
           >
             <ul className="md:flex   md:justify-between items-center ">

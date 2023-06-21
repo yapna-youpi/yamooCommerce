@@ -98,6 +98,12 @@
   cursor: default ;
 }
 
+/*--styling swiper--*/
+.carouss .swiper {
+  height: 45vh!important;
+  margin-bottom: 40px;
+}
+
 
 
 
@@ -130,9 +136,34 @@
     background-image: none;
   }
   .logo-polar{
-    max-width: 35%;
-    position: absolute;
-    top: 0;
-    left: 40%;
+    height: 55px;
+    transform: translateY(-22px);
   }
+  .image-carousel{
+    width: 100%;
+    height: 350px;
+    margin: 0 auto  25px auto;
+  }
+  .carouss .swiper {
+    height: 50vh!important;
+    margin-bottom: 40px;
+  }
+  .banner{
+    position: relative;
+  }
+  .banner .swiper{
+    margin: 120px auto 50px;
+    width: 80%;
+    height: 25vh;
+  }
+  .banner .image-banner{
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+  }
+  .banner .swiper-pagination-bullets{
+    position: absolute;
+    
+  }
+
 }

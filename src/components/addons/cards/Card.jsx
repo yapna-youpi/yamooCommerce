@@ -8,7 +8,7 @@ function Card({ data, imag }) {
         <div class="">
           <img
             className='img-produits w-60 h-56'
-            src={imag1}
+            src={imag}
             alt="Olive drab green ."
             class="h-full w-full object-cover object-center group-hover:opacity-75"
           />
