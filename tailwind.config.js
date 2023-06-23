@@ -7,7 +7,8 @@ module.exports = {
       colors: {
         darker: '#1F1F21',
         marron: "#b26541",
-        bleur: "#00A7EB"
+        bleur: "#00A7EB",
+        darkorange: "#ff8c00",
       },
       keyframes: {
         wiggle: {
@@ -17,7 +18,7 @@ module.exports = {
       },
       animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',
-      }
+      },
     },
   },
 }

@@ -1,3 +1,7 @@
+@font-face {
+  font-family: montilly;
+  src: url("./components/addons//fonts/Montserrat-Regular.ttf");
+}
 :root {
   --gold:#EAB107;
   gold-sombre: #A48B31;
@@ -22,28 +26,27 @@
 *{
   padding: 0;
   margin: 0;
+  font-family: "montilly";
+  
 }
 .home{
   background: url("./components/home/assets/bg.jpg");
   background-size: cover;
 }
-
-.header-top{
-    background: #141E30;
-  background: -webkit-linear-gradient(to right, #243B55, #141E30);
-  background: linear-gradient(to left, #243B55, #141E30, #141E30);
+.header-bottom{
+  background: url("./components/home/assets/bg.jpg");
+  background-size: cover;
 }
 .header ul li{
   cursor: pointer;
 }
-.menu {
-  transform: translateX(-100%);
-  background: #141E30;
-  background: -webkit-linear-gradient(to right, #243B55, #141E30);
-  background: linear-gradient(to right, #243B55, #141E30);
-
-  /* background-image: url("./components//header//assets/bg-logo.png"); */
-  background-size: cover;
+.carte{
+  margin: 15px 7px;
+  padding: 7px;
+}
+.menu{
+  /* margin-top: 15px; */
+  background-image: none;
 }
 
 /* @keyframes wiggle{
@@ -75,9 +78,9 @@
 
 /*--styling footer--*/
 .footer-content{
-  background: #141E30;
-  background: -webkit-linear-gradient(to right, #243B55, #141E30);
-  background: linear-gradient(to left, #243B55, #141E30, #141E30);
+  background: #ff8c00;
+  /* background: -webkit-linear-gradient(to right, #b86c08, #ff8c00);
+  background: linear-gradient(to left, #b86c08, #ff8c00, #ff8c00); */
 }
 .footer-bottom{
   border-top: 2px solid #85899730;
@@ -100,10 +103,17 @@
 
 /*--styling swiper--*/
 .carouss .swiper {
-  height: 45vh!important;
+  /* height: 45vh!important; */
   margin-bottom: 40px;
 }
-
+.banner .swiper-wrapper{
+  /* width: 80%; */
+  margin: 45px auto;
+}
+.carouss .swiper-slide{
+  display: flex!important;
+  justify-content: center;
+}
 
 
 
@@ -128,16 +138,34 @@
     opacity: 0;
   }
 }
+@media only screen and ( max-width:768px ) {
+  .menu {
+    transform: translateX(-100%);
+    background: #141E30;
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);
+    background: linear-gradient(to right, #243B55, #141E30);
+  
+    /* background-image: url("./components//header//assets/bg-logo.png"); */
+    background-size: cover;
+  }
+  .carte{
+    width: 400px;
+  }
+  .banner .image-banner{
+    width:100vh;
+    /* height: 120px; */
+  }
+  
+}
 
 @media only screen and (min-width: 768px) {
   .menu{
     /* margin-top: 15px; */
-    transform: translateX(0);
+    transform: translate(-25px,10px);
     background-image: none;
   }
   .logo-polar{
-    height: 55px;
-    transform: translateY(-22px);
+    transform: scale(1)!important;
   }
   .image-carousel{
     width: 100%;
@@ -145,21 +173,20 @@
     margin: 0 auto  25px auto;
   }
   .carouss .swiper {
-    height: 50vh!important;
+    /* height: 50vh!important; */
     margin-bottom: 40px;
   }
   .banner{
     position: relative;
   }
-  .banner .swiper{
+  /* .banner .swiper{
     margin: 120px auto 50px;
     width: 80%;
     height: 25vh;
-  }
+  } */
   .banner .image-banner{
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    /* width: 120px; */
+    /* height: 120px; */
   }
   .banner .swiper-pagination-bullets{
     position: absolute;
