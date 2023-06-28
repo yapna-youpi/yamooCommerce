@@ -15,7 +15,7 @@ import MobileLogo from "./assets/mobileLogo.png";
 import { useHistory } from "react-router-dom";
 import Banner from "../home/slider1/Banner";
 import slides from '../../info.json'
-import LogoBooks from "./assets/book2.jpg"
+import LogoBooks from "./assets/book2.png"
 
 function Header() {
   const [closeBtn, setCloseBtn] = useState(false);
@@ -43,14 +43,14 @@ function Header() {
   return (
     <div className="header ">
 
-      <div className="header-top w-full  bg-darkorange text-white md:rounded-b-3xl  py-10 px-5 md:relative md:px-10 flex justify-between items-center ">
+      <div className="header-top p-6 md:p-0 w-full  bg-darkorange text-white md:rounded-b-3xl   px-5 md:relative md:px-10 flex justify-between items-center ">
         <div className="logo md:h-16 md:-translate-y-7 md:translate-x-10 md:w-2/12">
           <img className="logo-polar" src={MobileLogo} alt="la maison du polar" />
         </div>
-        <div className="md:w-7/12">
+        <div className="hidden md:block md:w-7/12">
           <Banner data={1} Logo={LogoBooks} slides={slides} />
         </div>
-        <div className="cursor-pointer bg-white text-darkorange py-7 px-5 md:w-1/12 flex items-center flex-col">
+        <div className="hidden md:block cursor-pointer bg-white text-darkorange py-7 px-5 md:w-1/12 items-center flex-col">
           <UilUser size="60" color="#ff8c00"  />
           <h3>Compte</h3>
         </div>
@@ -105,7 +105,7 @@ function Header() {
           </div>
 
           <div
-            className="close-btn absolute top-12 right-5  z-50 md:hidden"
+            className="close-btn absolute top-12 right-5  z-40 md:hidden"
             onClick={() => handleClose()}
           >
             {closeBtn ? (
@@ -125,7 +125,7 @@ function Header() {
                 {/* <p className="text-darker cursor-pointer">
                   kboudjeka@gmail.com
                 </p> */}
-                <p className="text-bleur">Écrivez-nous</p>
+                <p className="text-indigo-700">Écrivez-nous</p>
               </div>
             </a>
           </div>
@@ -139,7 +139,7 @@ function Header() {
             >
               <div>
                 {/* <p className="text-darker cursor-pointer">678 55 18 93</p> */}
-                <p className="text-bleur">Appelez le service client.</p>
+                <p className="text-indigo-700">Appelez le service client.</p>
               </div>
             </a>
           </div>

@@ -1,0 +1,40 @@
+[debug] [2023-06-24T03:32:39.914Z] ----------------------------------------------------------------------
+[debug] [2023-06-24T03:32:39.920Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\will-turner\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting --project yamoocommerce
+[debug] [2023-06-24T03:32:39.922Z] CLI Version:   12.4.0
+[debug] [2023-06-24T03:32:39.923Z] Platform:      win32
+[debug] [2023-06-24T03:32:39.924Z] Node Version:  v16.17.0
+[debug] [2023-06-24T03:32:39.925Z] Time:          Sat Jun 24 2023 04:32:39 GMT+0100 (West Africa Standard Time)
+[debug] [2023-06-24T03:32:39.925Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-06-24T03:32:39.932Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-06-24T03:32:40.109Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-06-24T03:32:40.110Z] > authorizing via signed-in user (yapnayoupi@gmail.com)
+[debug] [2023-06-24T03:32:40.110Z] [iam] checking project yamoocommerce for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-06-24T03:32:40.112Z] > refreshing access token with scopes: []
+[debug] [2023-06-24T03:32:40.114Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-06-24T03:32:40.114Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-06-24T03:32:41.253Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2023-06-24T03:32:41.253Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-06-24T03:32:41.254Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/yamoocommerce:testIamPermissions [none]
+[debug] [2023-06-24T03:32:41.254Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/yamoocommerce:testIamPermissions x-goog-quota-user=projects/yamoocommerce
+[debug] [2023-06-24T03:32:41.254Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/yamoocommerce:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-06-24T03:32:41.301Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-06-24T03:32:41.301Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-06-24T03:32:42.508Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/yamoocommerce:testIamPermissions 401
+[debug] [2023-06-24T03:32:42.509Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/yamoocommerce:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"service":"cloudresourcemanager.googleapis.com","method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions"}}]}}
+[debug] [2023-06-24T03:32:42.513Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2023-06-24T03:32:42.515Z] > refreshing access token with scopes: []
+[debug] [2023-06-24T03:32:42.517Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-06-24T03:32:42.517Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-06-24T03:32:43.149Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2023-06-24T03:32:43.150Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-06-24T03:32:43.151Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/yamoocommerce [none]
+[debug] [2023-06-24T03:32:43.834Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/yamoocommerce 401
+[debug] [2023-06-24T03:32:43.834Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/yamoocommerce {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2023-06-24T03:32:43.834Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2023-06-24T03:32:43.838Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at responseToError (C:\Users\will-turner\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\will-turner\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:288:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project yamoocommerce. Please make sure the project exists and your account has permission to access it.

@@ -65,7 +65,6 @@
 
 /*--styling newsletter*/
 .newsletter{
-  /* background: url('../'); */
   z-index: 1;
 }
 .newsletter-policy{
@@ -151,11 +150,12 @@
   .carte{
     width: 400px;
   }
-  .banner .image-banner{
-    width:100vh;
-    /* height: 120px; */
+  .newsletter{
+    padding: 25px 11px;
   }
-  
+  .button-newsletter{
+    font-size: 10px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -165,7 +165,7 @@
     background-image: none;
   }
   .logo-polar{
-    transform: scale(1)!important;
+    transform: translateY(-15px);
   }
   .image-carousel{
     width: 100%;

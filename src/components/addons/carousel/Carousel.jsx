@@ -10,7 +10,7 @@ import image2 from "../../home/assets/titre.jpg"
 
 function Carousel({slides}) {
   return (
-    <div className='carouss pt-20'>
+    <div className='carouss pt-2 md:pt-20'>
       <Swiper
         modules={[Navigation,Autoplay, A11y]}
         spaceBetween={0}

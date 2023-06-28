@@ -2,7 +2,9 @@ import React from 'react'
 
 function Agenda() {
   return (
-    <div>Agenda</div>
+    <div>
+      Agenda
+    </div>
   )
 }
 
