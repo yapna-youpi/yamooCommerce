@@ -1,4 +1,5 @@
 import React, { useState, Link } from "react";
+import User from './User'
 import {
   UilEnvelope,
   UilPhone,
@@ -9,6 +10,9 @@ import {
   UilUser,
   UilMapPin,
 } from "@iconscout/react-unicons";
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+
 
 // import Logo from "./assets/Logo.png";
 import MobileLogo from "./assets/mobileLogo.png";
@@ -51,23 +55,25 @@ function Header() {
           <Banner data={1} Logo={LogoBooks} slides={slides} />
         </div>
         <div className="hidden md:block cursor-pointer bg-white text-darkorange py-7 px-5 md:w-1/12 items-center flex-col">
+        {/* s */}
           <UilUser size="60" color="#ff8c00"  />
           <h3>Compte</h3>
         </div>
       </div>
+         
 
       <div className="header-bottom flex w-full justify-between pt-5">
         <nav className="md:w-5/12 pl-5">
           <div
             id="menu"
             ref={menuref}
-            className="menu flex h-screen pt-20 md:pt-0  md:h-10 fixed z-40 top-0 left-0  justify-center mx-auto  ml-0 md:relative w-full text-white bg-darkorange 
+            className="menu flex h-full pt-20 md:pt-0  md:h-10 fixed z-40 top-0 left-0  justify-center mx-auto  ml-0 md:relative w-full text-white bg-darkorange 
                       hover:bg-contain md:bg-inherit py-7 md:py-0 px-15"
           >
             <ul className="md:flex md:text-darker font-bold md:justify-between items-center w-96">
               <li
                 onClick={() => nav("/")}
-                className=" focus:text-white flex mx-auto mt-8 md:mt-0 items-center justify-between w-28  md:w-auto"
+                className=" focus:text-white sm:hover:text-white sm:hover:bg-darkorange sm:focus:bg-darkorange sm:focus-within:px-3 sm:hover:px-3 px-1 transition-all ease-in-out duration-500 flex mx-auto mt-8 md:mt-0 items-center justify-between w-28  md:w-auto"
               >
                 Maison
                 <div className="rounded-full w-10 h-10 flex justify-center items-center bg-cyan-600 md:hidden">
@@ -76,7 +82,7 @@ function Header() {
               </li>
               <li
                 onClick={() => nav("librairie")}
-                className=" focus:text-white flex mx-auto mt-8 md:mt-0  items-center justify-between w-28  md:w-auto"
+                className=" focus:text-white sm:hover:text-white sm:hover:bg-darkorange sm:focus:bg-darkorange sm:focus-within:px-3 sm:hover:px-3 px-1 transition-all ease-in-out duration-500 flex mx-auto mt-8 md:mt-0  items-center justify-between w-28  md:w-auto"
               >
                 Librairie
                 <div className="rounded-full w-10 h-10 flex justify-center items-center bg-cyan-600 md:hidden">
@@ -85,7 +91,7 @@ function Header() {
               </li>
               <li
                 onClick={() => nav("contact")}
-                className=" focus:text-white flex mx-auto mt-8 md:mt-0  items-center justify-between w-28  md:w-auto"
+                className=" focus:text-white sm:hover:text-white sm:hover:bg-darkorange sm:focus:bg-darkorange sm:focus-within:px-3 sm:hover:px-3 px-1 transition-all ease-in-out duration-500 flex mx-auto mt-8 md:mt-0  items-center justify-between w-28  md:w-auto"
               >
                 Contact
                 <div className="rounded-full w-10 h-10 flex justify-center items-center bg-cyan-600 md:hidden">
@@ -93,8 +99,8 @@ function Header() {
                 </div>
               </li>
               <li
-                onClick={() => nav("/connexion")}
-                className=" focus:text-white flex mx-auto mt-8 md:mt-0  items-center justify-between w-28  md:w-auto"
+                onClick={() => nav("/login")}
+                className=" focus:text-white sm:hover:text-white sm:hover:bg-darkorange sm:focus:bg-darkorange sm:focus-within:px-3 sm:hover:px-3 px-1 transition-all ease-in-out duration-500 flex mx-auto mt-8 md:mt-0  items-center justify-between w-28  md:w-auto"
               >
                 Compte
                 <div className="rounded-full w-10 h-10 flex justify-center items-center bg-cyan-600 md:hidden">
@@ -145,7 +151,9 @@ function Header() {
           </div>
         </section>
       </div>
-      <div className="header-bottom"></div>
+      <div className="header-bottom">
+      {/* <User /> */}
+      </div>
     </div>
   );
 }

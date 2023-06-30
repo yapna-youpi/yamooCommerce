@@ -1,0 +1,6 @@
+.contact .form-groupe-box{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    position: relative;
+  }

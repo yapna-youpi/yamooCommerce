@@ -14,6 +14,7 @@ import Agenda from './agenda/Agenda';
 import Carousel from '../addons/carousel/Carousel';
 import Produits from './Produits/Produits';
 import slides from '../../info.json'
+import Pricing from './pricing/Pricing';
 
 function Home() {
     React.useEffect(() => {
@@ -33,7 +34,8 @@ function Home() {
         <More data={5} slides={slides} />
         <Produits />
         <Aside />
-        {/* <Agenda /> */}
+        <Pricing />
+        <Agenda />
         <Newsletter />
       </div>
     );

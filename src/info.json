@@ -1,6 +1,6 @@
 [
     {
-    "image": "https://media.istockphoto.com/id/1436096736/fr/photo/la-connaissance-cest-le-pouvoir-le-collage-dart.webp?b=1&s=170667a&w=0&k=20&c=rBg46_RBvHsCM-5dRnleWK6uNdZVh6peOkp3ezNpJUk=",
+    "image": "./components/home/assets/Couverture_kiti.png",
     "title": "le polar serein  du nord",
     "subtitle": "il est de coutume de bien nommé un polar",
     "author": "henry dunand"
@@ -12,7 +12,7 @@
     "author": "henry dunand"
 },
 {
-    "image": "../components/header/assets/book1.png",
+    "image": "./components/header/assets/book1.png",
     "title": "le polar serein  du sud",
     "subtitle": "il est de coutume de bien nommé un polar",
     "author": "henry dunand"

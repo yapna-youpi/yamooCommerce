@@ -9,6 +9,7 @@ module.exports = {
         marron: "#b26541",
         bleur: "#00A7EB",
         darkorange: "#ff8c00",
+        lightorange: "#FF9800",
       },
       keyframes: {
         wiggle: {
@@ -21,4 +22,5 @@ module.exports = {
       },
     },
   },
+  plugins: [],
 }

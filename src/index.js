@@ -7,10 +7,10 @@ import Firebase, { FirebaseContext, firebaseContext } from "./components/firebas
 import './index.css'
 
 ReactDOM.render(
-  <FirebaseContext.Provider value={new Firebase()}>
-    <App />
-  </FirebaseContext.Provider>,
-  document.getElementById('root')
+  // <FirebaseContext.Provider value={new Firebase()}>
+      <App />,
+  //</FirebaseContext.Provider>, 
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

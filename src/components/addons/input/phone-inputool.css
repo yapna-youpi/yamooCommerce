@@ -1,0 +1,51 @@
+:root {
+    --PhoneInputCountrySelectArrow-color: black;
+    /* --PhoneInputCountryFlag-borderColor: red; */
+    --PhoneInputCountrySelectArrow-opacity: 1;
+    --PhoneInputCountryFlag-height: 30px;
+
+}
+
+.input-phone {
+    position: relative;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.01em;    
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.input-phone label {
+    display: block;
+    /* margin-left: 12%; */
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+.input-phone span {
+    display: block;
+    /* margin-left: 12%; */
+    font-size: 0.8rem;
+    color: rgb(244, 67, 54);
+}
+.PhoneInputInput {
+    border: none;
+    border-bottom: 1px solid #000;
+    font-size: 1rem;
+}
+.PhoneInputInput:focus {
+    outline: none;
+
+}
+.input-phone .phono{
+    display: flex;
+}
+.input-phone .phono-input{
+    width: 98%;
+}
+.input-phone .tooltip-input{
+    width: 2%;
+    color: orange;
+}
+.MuiTooltip-tooltip {
+    font-size: medium!important;
+}

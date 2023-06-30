@@ -2,4 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.box {
+    @apply relative w-6/12 h-96 flex justify-center items-center flex-col
+}
 
+.box h2 {
+    @apply text-white text-xl font-medium mb-3
+}
+
+.box button {
+    @apply cursor-pointer bg-white text-darker text-base font-medium border-0 py-2 px-3
+}

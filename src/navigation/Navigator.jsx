@@ -7,14 +7,15 @@ import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import Home from '../components/home/Home';
 import Boutique from '../components/boutique/Boutique';
-import Contact from '../components/home/contact/Contact'
+import Contact from '../components/contact/Contact'
+import Login from "../components/login/Login"
 import Error from '../components/Error/404';
 
 function Main({ User, Country }) {
 
 
     const checkUser = C => User.userId ? C : () => <Redirect to="/login" />
-    const checkAccount = C => User.userEmail.includes('@ipercash.') ? C : () =><> </>
+    const checkAccount = C => User.userEmail.includes('') ? C : () =><> </>
 
     // console.log("the User ", User)
     return (
@@ -25,6 +26,7 @@ function Main({ User, Country }) {
                     <Route path='/' exact component={Home} />
                     <Route path='/home' exact component={Home} />
                     <Route path='/contact' exact component={Contact} />
+                    <Route path='/login' exact component={Login} />
                     <Route path='/librairie' exact component={Boutique} />
                     <Route path='*' component={Error} />
                 </Switch>

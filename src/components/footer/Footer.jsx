@@ -16,10 +16,10 @@ function Footer() {
     let lang=JSON.parse(localStorage.getItem("lang")||'{"lang":"fr"}').lang
 
     return (
-      <div className="footer relative">
+      <div className="footer relative font-bold">
         <footer>
-          <div className="footer-content pl-5 pr-4 md:pl-0 md:pr-0 md:pb-5 flex flex-col w-full md:rounded-t-3xl  text-white md:flex-row md:justify-around  ">
-            <div className=" md:w-5/12  text-left md:px-10 md:py-5 text-white">
+          <div className="footer-content pl-5 pr-4 md:pl-0 md:pr-0 md:pb-5 flex flex-col w-full md:rounded-t-3xl  text-darker md:flex-row md:justify-around  ">
+            <div className=" md:w-5/12  text-left md:px-10 md:py-5 text-darker">
               <div className="">
                 <img src={MobileLogo} alt="la maison du polar" />
               </div>
@@ -37,7 +37,7 @@ function Footer() {
             </div>
             <div className=" md:w-3/12 mt-4 md:mt-0  md:px-5 md:pt-16 ">
               <b>Les coups de cœur du mois</b>
-              <ul className="footer-list2 mt-2 md:mt-0 text-left text-white md:pt-8">
+              <ul className="footer-list2 mt-2 md:mt-0 text-left text-darker md:pt-8">
                 <li>
                   Young adult : les romans qui abordent des sujets de société
                 </li>
@@ -49,7 +49,7 @@ function Footer() {
             </div>
             <div className=" md:w-2/12 mt-4 md:mt-0  md:px-5 md:pt-16 ">
               <b>À propos</b>
-              <ul className="footer-list3 mt-2 md:mt-0 text-left text-white md:pt-8">
+              <ul className="footer-list3 mt-2 md:mt-0 text-left text-darker md:pt-8">
                 <p>Qui sommes-nous ?</p>
                 <p>Créer mon compte</p>
                 <p>Questions fréquentes</p>
@@ -58,13 +58,13 @@ function Footer() {
               </ul>
             </div>
             <div className="md:w-2/12  mt-4 md:mt-0 md:px-5 md:pt-16">
-              <b>suivez-nous</b>
+              <b>Suivez-nous</b>
               <ul>
                 <li>
                     <i></i>
                 </li>
               </ul>
-              <ul className="footer-list4 mt-2 md:mt-0 text-left text-white md:pt-8 pb-5 md:pb-0"></ul>
+              <ul className="footer-list4 mt-2 md:mt-0 text-left text-darker md:pt-8 pb-5 md:pb-0"></ul>
             </div>
           </div>
           <div className="footer-bottom flex justify-between pl-4 pr-0 md:px-8 py-4 text-slate-500 ">
