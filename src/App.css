@@ -33,6 +33,9 @@
   background: url("./components/home/assets/bg.jpg");
   background-size: cover;
 }
+.header{
+  background: url("./components//home/assets/bg.jpg")
+}
 .header-bottom{
   background: url("./components/home/assets/bg.jpg");
   background-size: cover;
@@ -76,6 +79,9 @@
 }
 
 /*--styling footer--*/
+.footer{
+  background: url("./components//home/assets/bg.jpg");
+}
 .footer-content{
   background: #ff8c00;
   /* background: -webkit-linear-gradient(to right, #b86c08, #ff8c00);

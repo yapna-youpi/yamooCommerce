@@ -5,7 +5,7 @@ import 'swiper/swiper-bundle.css';
 import "swiper/css/effect-fade";
 import 'swiper/css/autoplay'
 
-import image1 from "../../home/assets/titre.jpg"
+import image1 from "../../home/assets/titre.png"
 import image2 from "../../home/assets/Couverture_kiti.png"
 import image3 from "../../home/assets/Couverture_lula.png"
 import image4 from "../../home/assets/Couverture_chambre.png"
@@ -30,7 +30,7 @@ function Carousel({slides}) {
         <SwiperSlide>
           <img src={image2} alt="kiti" />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide>ç_&é 
           <img src={image3} alt="lula" />
         </SwiperSlide>
         <SwiperSlide>
