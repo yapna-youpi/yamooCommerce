@@ -8,6 +8,16 @@ import './footer.css'
 
 function Footer() {
     const { t } = useTranslation();
+    
+    // useEffect(() => {
+    //   let nav = document.querySelector("nav");
+    //   window.addEventListener("scroll", () => {
+    //     if (window.scrollY >= 30) {
+    //       document.querySelector("#nav").classList.add("bg-visible");
+    //     } else document.querySelector("#nav").classList.remove("bg-visible");
+    //   });
+    // }, []);
+
     // const History = useHistory();
 
     let AmList={
@@ -21,8 +31,8 @@ function Footer() {
         <footer>
           <div className="footer-content pl-5 pr-4 md:pl-0 md:pr-0 md:pb-5 flex flex-col w-full md:rounded-t-3xl  text-darker md:flex-row md:justify-around  ">
             <div className=" md:w-5/12  text-left md:px-10 md:py-5 text-darker">
-              <div className="py-5">
-                <img src={MobileLogo} alt="la maison du polar" />
+              <div className="py-5 pl-12">
+                <img className='w-16 h-16 md:w-36 md:h-36 ' src={MobileLogo} alt="la maison du polar" />
               </div>
               <p className=" md:mt-2">
                 mets un point d’honneur sur la littérature pour enfant
@@ -72,6 +82,7 @@ function Footer() {
             <p>Designer par <a href='https://api.whatsapp.com/send?phone=678719650' target='_blank'>Will-turner</a></p>
           </div>
         </footer>
+        {/* <div>bg-visible</div> */}
       </div>
     );
 }

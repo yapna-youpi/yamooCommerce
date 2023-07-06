@@ -13,7 +13,7 @@ import image5 from "../../home/assets/book.jpg"
 
 function Carousel({slides}) {
   return (
-    <div className="carouss pt-2 md:pt-20">
+    <div className="carouss pt-2 md:pt-20" data-aos="zoom-in-up">
       <Swiper
         modules={[Navigation, Autoplay, A11y]}
         spaceBetween={0}

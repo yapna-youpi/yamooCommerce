@@ -109,7 +109,7 @@ export default function Pricing() {
         component="main"
         sx={{ pt: 8, pb: 6 }}
       >
-        <h2 className='text-center text-5xl md:text-6xl py-4'> Prix Abonnement</h2>
+        <h2 className='text-center text-2xl font-bold sm:text-5xl md:text-6xl py-4'> Prix Abonnement</h2>
         <Typography
           variant="h5"
           align="center"

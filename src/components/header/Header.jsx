@@ -49,14 +49,14 @@ function Header() {
 
       <div className="header-top p-6 md:p-0 w-full  bg-darkorange text-white md:rounded-b-3xl   px-5 md:relative md:px-10 flex justify-between items-center ">
         <div className="logo md:h-16 md:-translate-y-7 md:translate-x-10 md:w-2/12">
-          <img className="logo-polar" src={MobileLogo} alt="la maison du polar" />
+          <img className="logo-polar w-16 h-16 md:w-24 md:h-24" src={MobileLogo} alt="la maison du polar" />
         </div>
         <div className="hidden md:block md:w-7/12">
           <Banner data={1} Logo={LogoBooks} slides={slides} />
         </div>
-        <div className="hidden md:block cursor-pointer bg-white text-darkorange py-7 px-5 md:w-1/12 items-center flex-col">
+        <div className="hidden md:block cursor-pointer  text-gray-200 py-7  md:w-1/12 items-center flex-col">
         {/* s */}
-          <UilUser size="60" color="#ff8c00"  />
+          <UilUser size="60" color="#ffffff"  />
           <h3>Compte</h3>
         </div>
       </div>
@@ -75,7 +75,7 @@ function Header() {
                 onClick={() => nav("/")}
                 className=" focus:text-white sm:hover:text-white sm:hover:bg-darkorange sm:focus:bg-darkorange sm:focus-within:px-3 sm:hover:px-3 px-1 transition-all ease-in-out duration-500 flex mx-auto mt-8 md:mt-0 items-center justify-between w-28  md:w-auto"
               >
-                Maison
+                ACCEUIL
                 <div className="rounded-full w-10 h-10 flex justify-center items-center bg-cyan-600 md:hidden">
                   <UilHome />
                 </div>
@@ -84,7 +84,7 @@ function Header() {
                 onClick={() => nav("librairie")}
                 className=" focus:text-white sm:hover:text-white sm:hover:bg-darkorange sm:focus:bg-darkorange sm:focus-within:px-3 sm:hover:px-3 px-1 transition-all ease-in-out duration-500 flex mx-auto mt-8 md:mt-0  items-center justify-between w-28  md:w-auto"
               >
-                Librairie
+                LIBRAIRIE
                 <div className="rounded-full w-10 h-10 flex justify-center items-center bg-cyan-600 md:hidden">
                   <UilShoppingCartAlt />
                 </div>
@@ -93,7 +93,7 @@ function Header() {
                 onClick={() => nav("contact")}
                 className=" focus:text-white sm:hover:text-white sm:hover:bg-darkorange sm:focus:bg-darkorange sm:focus-within:px-3 sm:hover:px-3 px-1 transition-all ease-in-out duration-500 flex mx-auto mt-8 md:mt-0  items-center justify-between w-28  md:w-auto"
               >
-                Contact
+                CONTACT
                 <div className="rounded-full w-10 h-10 flex justify-center items-center bg-cyan-600 md:hidden">
                   <UilMapPin />
                 </div>
@@ -102,7 +102,7 @@ function Header() {
                 onClick={() => nav("/login")}
                 className=" focus:text-white sm:hover:text-white sm:hover:bg-darkorange sm:focus:bg-darkorange sm:focus-within:px-3 sm:hover:px-3 px-1 transition-all ease-in-out duration-500 flex mx-auto mt-8 md:mt-0  items-center justify-between w-28  md:w-auto"
               >
-                Compte
+                COMPTE
                 <div className="rounded-full w-10 h-10 flex justify-center items-center bg-cyan-600 md:hidden">
                   <UilUser />
                 </div>

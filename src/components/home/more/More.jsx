@@ -18,6 +18,8 @@ import "swiper/css/autoplay";
 function More() {
   return (
     <div>
+       <h2 className="font-semibold px-4 mt-4  text-4xl md:mt-16 md:pl-14 md:ml-1 ">Notre Catalogue</h2>
+      <p className='py-5 px-4 md:px-0 md:pl-14 md:ml-1 font-semibold'>Choisissez le livre de votre lecture et de votre imaginaire!</p>
       <Swiper
         modules={[Pagination, Autoplay, A11y]}
         spaceBetween={0}
@@ -25,9 +27,11 @@ function More() {
         loop={true}
         autoplay={{ delay: 2200 }}
       >
-        <SwiperSlide>
-          <img  className="image-banner cursor-pointer" src={logo0} alt="la voiture" />
-        </SwiperSlide>
+        <div data-aos="zoom-in">
+          <SwiperSlide >
+            <img  className="image-banner cursor-pointer" src={logo0} alt="la voiture" />
+          </SwiperSlide>
+        </div>
         <SwiperSlide>
           <img className="image-banner cursor-pointer" src={logo1} alt="la voiture" />
         </SwiperSlide>
