@@ -9,8 +9,8 @@ function News() {
 
   return (
     <div className="bg-lightorange pb-8 mb-20">
-      <h2 className="text-center text-xl md:text-3xl py-0 md:pt-14 md:mt-20 font-bold ">
-        À Ne Pas Manquer Chez Nos Editeurs Partenaires !
+      <h2 className="text-center pt-5 text-xl md:text-3xl py-0 md:pt-14 md:mt-20 font-bold ">
+        Ne Manquez pas Chez Nos Editeurs Partenaires !
       </h2>
       <div className="flex flex-row justify-around pt-7  sm:flex-row sm:flex-wrap sm:justify-between sm:w-6/12 mx-auto md:my-5 md:px-5 md:py-5">
         <p className="w-3/12">

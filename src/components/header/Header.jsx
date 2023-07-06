@@ -73,7 +73,7 @@ function Header() {
             <ul className="md:flex md:text-darker font-bold md:justify-between items-center w-96">
               <li
                 onClick={() => nav("/")}
-                className=" focus:text-white sm:hover:text-white sm:hover:bg-darkorange sm:focus:bg-darkorange sm:focus-within:px-3 sm:hover:px-3 px-1 transition-all ease-in-out duration-500 flex mx-auto mt-8 md:mt-0 items-center justify-between w-28  md:w-auto"
+                className="menu-li"
               >
                 ACCEUIL
                 <div className="rounded-full w-10 h-10 flex justify-center items-center bg-cyan-600 md:hidden">
@@ -82,7 +82,7 @@ function Header() {
               </li>
               <li
                 onClick={() => nav("librairie")}
-                className=" focus:text-white sm:hover:text-white sm:hover:bg-darkorange sm:focus:bg-darkorange sm:focus-within:px-3 sm:hover:px-3 px-1 transition-all ease-in-out duration-500 flex mx-auto mt-8 md:mt-0  items-center justify-between w-28  md:w-auto"
+                className="menu-li"
               >
                 LIBRAIRIE
                 <div className="rounded-full w-10 h-10 flex justify-center items-center bg-cyan-600 md:hidden">
@@ -91,7 +91,7 @@ function Header() {
               </li>
               <li
                 onClick={() => nav("contact")}
-                className=" focus:text-white sm:hover:text-white sm:hover:bg-darkorange sm:focus:bg-darkorange sm:focus-within:px-3 sm:hover:px-3 px-1 transition-all ease-in-out duration-500 flex mx-auto mt-8 md:mt-0  items-center justify-between w-28  md:w-auto"
+                className="menu-li"
               >
                 CONTACT
                 <div className="rounded-full w-10 h-10 flex justify-center items-center bg-cyan-600 md:hidden">
@@ -100,7 +100,7 @@ function Header() {
               </li>
               <li
                 onClick={() => nav("/login")}
-                className=" focus:text-white sm:hover:text-white sm:hover:bg-darkorange sm:focus:bg-darkorange sm:focus-within:px-3 sm:hover:px-3 px-1 transition-all ease-in-out duration-500 flex mx-auto mt-8 md:mt-0  items-center justify-between w-28  md:w-auto"
+                className="menu-li"
               >
                 COMPTE
                 <div className="rounded-full w-10 h-10 flex justify-center items-center bg-cyan-600 md:hidden">
@@ -111,13 +111,13 @@ function Header() {
           </div>
 
           <div
-            className="close-btn absolute top-12 right-5  z-40 md:hidden"
+            className="close-btn absolute top-10 right-5  z-40 md:hidden"
             onClick={() => handleClose()}
           >
             {closeBtn ? (
-              <UilMultiply size="40" color="#ffffff" />
+              <UilMultiply size="45" color="#ffffff" />
             ) : (
-              <UilBars size="40" color="#ffffff" />
+              <UilBars size="45" color="#ffffff" />
             )}
           </div>
         </nav>
