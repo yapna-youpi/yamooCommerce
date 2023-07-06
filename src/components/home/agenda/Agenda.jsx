@@ -1,4 +1,5 @@
 import React from 'react'
+import affiche from "../assets/magap.png"
 
 function Agenda() {
   return (
@@ -6,8 +7,8 @@ function Agenda() {
       <figure class="md:flex w-11/12 mx-auto my-24 sm:px-20 bg-darkorange rounded-xl p-8  dark:bg-slate-800">
         <img
           class="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto"
-          src="https://fastly.picsum.photos/id/174/400/484.jpg?hmac=ff7g5OTqcW2ejEqfMK_2Mbieru0cDF6hrgW1WkRYue0"
-          alt=""
+          src={affiche}
+          alt="magapche pere et fille"
           width="384"
           height="512"
         />
