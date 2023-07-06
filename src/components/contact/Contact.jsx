@@ -7,6 +7,7 @@ import img from "../../image/9782266320726ORI.jpg"
 import { Input } from '../addons/input/Input';
 
 import "./contact.css"
+import SignIn from '../SignIn';
 
 function Contact() {
   const history = useHistory();
@@ -42,64 +43,18 @@ function Contact() {
       <div className="contact-right w-11/12 px-4 md:w-8/12 md:px-32 md:py-24">
         <hr />
         <h3>information personnelle</h3>
-        <form>
+        <SignIn />
+
+        {/* <form>
           <div style={{ marginBottom: "5px" }} className="form-group">
             <input
               id="name"
-              className="w-full p-3 border active:border-emerald-400 rounded-md focus:border-sky-500"
+              className="w-full p-3 border mt-16 active:border-emerald-400 rounded-md focus:border-sky-500"
               type="text"
               placeholder="First and Last Name"
             />
           </div>
-        </form>
-        <div style={{ marginBottom: "5px" }} className="form-group">
-          <Input
-            required
-            className="name"
-            label="First and Last Name"
-            id="name"
-            name="name"
-            type="text"
-            value=""
-          />
-        </div>
-        <div className="form-groupe">
-          <form>
-            <label class="block">
-              <span class="block text-sm font-medium text-slate-700">
-                Email
-              </span>
-              <input type="email" class="peer ..." />
-              <p class="mt-2 invisible peer-invalid:visible text-pink-600 text-sm">
-                Please provide a valid email address.
-              </p>
-            </label>
-          </form>
-        </div>
-        <div>
-          <fieldset>
-            <input
-              id="draft"
-              class="peer/draft"
-              type="radio"
-              name="status"
-              checked
-            />
-            <label for="draft" class="peer-checked/draft:text-sky-500">
-              Draft
-            </label>
-
-            <input
-              id="published"
-              class="peer/published"
-              type="radio"
-              name="status"
-            />
-            <label for="published" class="peer-checked/published:text-sky-500">
-              Published
-            </label>
-          </fieldset>
-        </div>
+        </form> */}
       </div>
     </div>
   );

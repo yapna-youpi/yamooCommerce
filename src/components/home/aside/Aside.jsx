@@ -8,7 +8,7 @@ function Aside() {
             <h3 className='px-4 pt-8 text-3xl md:text-4xl md:px-10 md:pt-8'>Lisez partout et sur tous les supports!</h3>
             <p className='text-2xl px-10 pt-4'>Accédez aux contenus en illimité sur téléphone, tablette, ordinateur et téléviseur sans payer plus</p>
         </div>
-        <div className='w-full mx-4 lg:-translate-y-16 md:w-5/12 '>
+        <div className='w-full mx-4 lg:-translate-y-16   md:w-5/12 '>
             <img className='' src={image} alt="utiliser la maison polar" />
         </div>
     </div>

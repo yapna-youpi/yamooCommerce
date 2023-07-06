@@ -35,7 +35,7 @@ function Header() {
   const nav = (route) => {
     History.push(route);
     menuref.current.classList.toggle("show");
-    // setCloseBtn(!closeBtn);
+    setCloseBtn(!closeBtn);
   };
   const choseImage = () => window.innerWidth <= 700;
   console.log(choseImage());
@@ -126,7 +126,7 @@ function Header() {
             <span className="m-2">
               <UilEnvelope size="20" color="#ff8c00" />
             </span>
-            <a href="mailto:kboudjeka@gmail.com">
+            <a href="mailto:kboudjeka@gmail.com" target='_blank'>
               <div>
                 {/* <p className="text-darker cursor-pointer">
                   kboudjeka@gmail.com
@@ -140,7 +140,8 @@ function Header() {
               <UilPhone size="20" color="#ff8c00" />
             </span>
             <a
-              className="link-whatsapp"
+              className="link-whatsapp" 
+              target='_blank'
               href="https://api.whatsapp.com/send?phone=678551893"
             >
               <div>

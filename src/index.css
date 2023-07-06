@@ -3,13 +3,16 @@
 @tailwind utilities;
 
 .box {
-    @apply relative w-6/12 h-96 flex justify-center items-center flex-col
+    @apply relative w-6/12 h-96 flex justify-center items-center flex-col;
 }
 
 .box h2 {
-    @apply text-white text-xl font-medium mb-3
+    @apply text-white text-xl font-medium mb-3;
 }
 
 .box button {
-    @apply cursor-pointer bg-white text-darker text-base font-medium border-0 py-2 px-3
+    @apply cursor-pointer bg-white text-darker text-base font-medium border-0 py-2 px-3;
+}
+.icon{
+    @apply w-5 h-5 rounded-full p-5  justify-center items-center inline-block md:block cursor-pointer;
 }
