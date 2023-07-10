@@ -23,9 +23,10 @@ function More() {
       <Swiper
         modules={[Pagination, Autoplay, A11y]}
         spaceBetween={0}
-        slidesPerView={5}
+        slidesPerView={2}
         loop={true}
         autoplay={{ delay: 2200 }}
+        center
       >
         <div data-aos="zoom-in">
           <SwiperSlide >

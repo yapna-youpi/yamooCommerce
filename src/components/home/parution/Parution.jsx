@@ -1,6 +1,6 @@
 import React from 'react'
 import Card from '../../addons/cards/Card'
-import tof1 from "../assets/magapche.png"
+import tof1 from "../assets/magap.png"
 import tof2 from "../assets/9782266320726ORI.jpg"
 import tof3 from "../assets/9782365697323ORI.jpg"
 import tof4 from "../assets/9782749174686ORI.jpg"
