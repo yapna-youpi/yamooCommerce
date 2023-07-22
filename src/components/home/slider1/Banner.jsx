@@ -6,6 +6,9 @@ import Logo1 from "../../header/assets/book1.png"
 import Logo2 from "../../header/assets/book2.png"
 import Logo3 from "../../header/assets/book3.png"
 import Logo4 from "../../header/assets/book4.png"
+import Logo6 from "../../header/assets/book6.png"
+import Logo7 from "../../header/assets/book7.png"
+import Logo8 from "../../header/assets/book5.png"
 
 import 'swiper/swiper-bundle.css';
 import 'swiper/css/autoplay'
@@ -22,6 +25,12 @@ function Banner( { slides, Logo, data }) {
         autoplay={{ delay: 2200 }}
       >
         <SwiperSlide>
+          <img className="image-banner" src={Logo6} alt={slides.title} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img className="image-banner" src={Logo7} alt={slides.title} />
+        </SwiperSlide>
+        <SwiperSlide>
           <img className="image-banner" src={Logo0} alt={slides.title} />
         </SwiperSlide>
         <SwiperSlide>
@@ -32,6 +41,9 @@ function Banner( { slides, Logo, data }) {
         </SwiperSlide>
         <SwiperSlide>
           <img className="image-banner" src={Logo4} alt={slides.title} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img className="image-banner" src={Logo8} alt={slides.title} />
         </SwiperSlide>
         <SwiperSlide>
           <img className="image-banner" src={Logo3} alt={slides.title} />

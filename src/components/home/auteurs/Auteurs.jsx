@@ -3,6 +3,7 @@ import Card from '../../addons/cards/Card'
 
 import tof1 from "../assets/auteur1.jpg"
 import tof2 from "../assets/auteur2.jpg"
+import tof3 from "../assets/auteur3.jpg"
 function Auteurs() {
 
     const data = [
@@ -23,6 +24,12 @@ function Auteurs() {
         author: "Boudjeka Kamto",
         title: "Père et Fille",
         tof: tof1
+      },
+      {
+        type: "polar serein",
+        author: "Tiomasta Fopa",
+        title: "Ylarie",
+        tof: tof3
       },
     ];
 

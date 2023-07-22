@@ -18,7 +18,7 @@ function Footer() {
     //   });
     // }, []);
 
-    // const History = useHistory();
+    const History = useHistory();
 
     let AmList={
         en: ["http://ipercash.fr/politiques/aml_en.pdf","http://ipercash.fr/politiques/policy_en.pdf" , "http://ipercash.fr/politiques/terms_en.pdf"],
@@ -29,13 +29,13 @@ function Footer() {
     return (
       <div className="footer relative font-bold">
         <footer>
-          <div className="footer-content pl-5 pr-4 md:pl-0 md:pr-0 md:pb-5 flex flex-col w-full md:rounded-t-3xl  text-darker md:flex-row md:justify-around  ">
-            <div className=" md:w-5/12  text-left md:px-10 md:py-5 text-darker">
+          <div className="footer-content pl-5 pr-4 md:pl-0 md:pr-0 md:pb-5 flex flex-col w-full md:rounded-t-3xl  text-leight md:flex-row md:justify-around  ">
+            <div className=" md:w-5/12  text-left md:px-10 md:py-5 ">
               <div className="py-5 pl-12">
                 <img className='w-16 h-16 md:w-36 md:h-36 ' src={MobileLogo} alt="la maison du polar" />
               </div>
               <p className=" md:mt-2">
-                mets un point d’honneur sur la littérature pour enfant
+                La Maison Polar-Edition mets un point d’honneur sur la littérature pour enfant
                 qui doit être le socle de toutes les littératures
                 GribouillageEditions, nous embrassons également les domaines
                 moins vulgarisés que sont le Théâtre à travers la Bibliothèque
@@ -46,7 +46,7 @@ function Footer() {
             </div>
             <div className=" md:w-3/12 mt-4 md:mt-0  md:px-5 md:pt-16 ">
               <b>Les coups de cœur du mois</b>
-              <ul className="footer-list2 mt-2 md:mt-0 text-left text-darker md:pt-8">
+              <ul className="footer-list2 mt-2 md:mt-0 text-left text-leight md:pt-8">
                 <li>
                   Young adult : les romans qui abordent des sujets de société
                 </li>
@@ -58,8 +58,8 @@ function Footer() {
             </div>
             <div className=" md:w-2/12 mt-4 md:mt-0  md:px-5 md:pt-16 ">
               <b>À propos</b>
-              <ul className="footer-list3 mt-2 md:mt-0 text-left text-darker md:pt-8">
-                <p>Qui sommes-nous ?</p>
+              <ul className="footer-list3 mt-2 md:mt-0 text-left text-leight md:pt-8 event:cursor-pointer">
+                <p onClick={()=>History.push('/histoire')}>Qui sommes-nous ?</p>
                 <p>Créer mon compte</p>
                 <p>Questions fréquentes</p>
                 <p>Mentions légales</p>
@@ -74,7 +74,7 @@ function Footer() {
                   <a href='#' ><div className='icon sm:hover:text-blue-600' >< UilTwitter  /></div></a>
                   <a href='#' ><div className='icon sm:hover:text-blue-950'>< UilLinkedin  /></div></a>
                 </div>
-              <ul className="footer-list4 mt-2 md:mt-0 text-left text-darker md:pt-8 pb-5 md:pb-0"></ul>
+              <ul className="footer-list4 mt-2 md:mt-0 text-left text-leight md:pt-8 pb-5 md:pb-0"></ul>
             </div>
           </div>
           <div className="footer-bottom flex justify-between pl-4 pr-0 md:px-8 py-4 text-slate-500 ">

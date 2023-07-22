@@ -9,6 +9,7 @@ import Home from '../components/home/Home';
 import Boutique from '../components/boutique/Boutique';
 import Contact from '../components/contact/Contact'
 import Login from "../components/login/Login"
+import Histoire from "../components/histoire/Histoire"
 import Error from '../components/Error/404';
 
 function Main({ User, Country }) {
@@ -28,6 +29,7 @@ function Main({ User, Country }) {
                     <Route path='/contact' exact component={Contact} />
                     <Route path='/login' exact component={Login} />
                     <Route path='/librairie' exact component={Boutique} />
+                    <Route path='/histoire' exact component={Histoire} />
                     <Route path='*' component={Error} />
                 </Switch>
                 <Footer />

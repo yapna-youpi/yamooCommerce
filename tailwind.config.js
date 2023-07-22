@@ -10,6 +10,7 @@ module.exports = {
         bleur: "#00A7EB",
         darkorange: "#ff8c00",
         lightorange: "#FFDE99",
+        leight: "#d3cecc",
       },
       keyframes: {
         wiggle: {

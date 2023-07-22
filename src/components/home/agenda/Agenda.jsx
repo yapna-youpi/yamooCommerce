@@ -15,13 +15,13 @@ function Agenda() {
         <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
           <blockquote>
             <p class="text-lg font-bold md:text-3xl">
-              “Salon du livre jeunesse et de la BD de Yaoundé” : # SALIJEY
+              “Etoiles de l'edition Camerounaise 2023” : # Remise Des Prix Par Theme
             </p>
           </blockquote>
           <figcaption class="md:pt-3">
-            <div class= "text-violet-700 font-extrabold md:py-1">Magapche</div>
+            <div class= "text-violet-700 font-extrabold md:py-1">Etoiles De l'Edition</div>
             <div class="text-slate-700 dark:text-slate-500">
-              Dès le 15 juillet 2023 dans la ville de Yaoundé
+              Dès le 27 octobre 2023 dans la ville de Yaoundé
             </div>
           </figcaption>
         </div>
