@@ -261,6 +261,7 @@
 .formBx.activer .formGroup input[type="text"],.formBx.activer .formGroup input[type="number"],.formBx.activer .formGroup input[type="password"],.formBx.activer .formGroup input[type="password"]{
   border-bottom: 2px solid #c31432;
 }
+
 @keyframes loginanim{
   0%{
       left: 0%;
@@ -342,6 +343,7 @@
   }
   .logo-polar{
     transform: translateY(-15px);
+    width: 8rem!important;
   }
   .image-carousel{
     width: 100%;

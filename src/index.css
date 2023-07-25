@@ -19,3 +19,4 @@
 .menu-li{
     @apply focus:text-white sm:hover:text-white sm:hover:bg-darkorange sm:focus:bg-darkorange sm:focus-within:px-3 sm:hover:px-3 md:px-1 transition-all ease-in-out duration-500 flex mx-auto mt-8 md:mt-0 items-center justify-between w-32  md:w-auto
 }
+

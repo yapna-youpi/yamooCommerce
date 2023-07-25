@@ -47,9 +47,9 @@ function Header() {
   return (
     <div className="header ">
 
-      <div className="header-top p-6 md:p-0 w-full   text-white md:rounded-b-3xl   px-5 md:relative md:px-10 flex justify-between items-center ">
+      <div className="header-top p-6 md:p-0 w-full  text-white md:rounded-b-3xl   px-5 md:relative md:px-10 flex justify-between items-center ">
         <div className="logo md:h-16 md:-translate-y-7 md:translate-x-10 md:w-2/12">
-          <img className="logo-polar w-16 h-16 md:w-24 md:h-24" src={MobileLogo} alt="la maison du polar" />
+          <img className="logo-polar w-32 h-16 md:w-24 md:h-24" src={MobileLogo} alt="la maison du polar" />
         </div>
         <div className="hidden md:block md:w-7/12">
           <Banner data={1} Logo={LogoBooks} slides={slides} />

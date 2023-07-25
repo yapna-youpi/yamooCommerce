@@ -15,56 +15,108 @@ import logo9 from "../assets/la_main.jpeg"
 
 import "swiper/swiper-bundle.css";
 import "swiper/css/autoplay";
+import { Container } from "@mui/material";
 
 function More() {
   return (
     <div className="md:container md:mx-auto">
-       <h2 className="font-semibold px-4 mt-4  text-4xl md:mt-16 md:pl-14 md:ml-1 ">Notre Catalogue</h2>
-      <p className='py-5 px-4 md:px-0 md:pl-14 md:ml-1 font-semibold'>Choisissez le livre de votre lecture et de votre imaginaire!</p>
-      <Swiper
-        modules={[Pagination, Autoplay, A11y]}
-        spaceBetween={0}
-        slidesPerView={2}
-        loop={true}
-        autoplay={{ delay: 2200 }}
-        center
-      >
-        <div data-aos="zoom-in">
-          <SwiperSlide >
-            <img  className="image-banner cursor-pointer" src={logo0} alt="la voiture" />
-          </SwiperSlide>
-        </div>
-        <SwiperSlide>
-          <img className="image-banner cursor-pointer" src={logo1} alt="la voiture" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="image-banner cursor-pointer" src={logo2} alt="la voiture" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="image-banner cursor-pointer" src={logo3} alt="la voiture" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="image-banner cursor-pointer" src={logo4} alt="la voiture" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="image-banner cursor-pointer" src={logo5} alt="la voiture" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="image-banner cursor-pointer" src={logo6} alt="la voiture" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="image-banner cursor-pointer" src={logo7} alt="la voiture" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="image-banner cursor-pointer" src={logo8} alt="la voiture" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="image-banner cursor-pointer" src={logo7} alt="la voiture" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="image-banner cursor-pointer" src={logo9} alt="la voiture" />
-        </SwiperSlide>
-      </Swiper>
+      <h2 className="font-semibold px-4 mt-4  text-4xl md:mt-16 md:pl-14 md:ml-1 ">
+        Notre Catalogue
+      </h2>
+      <p className="py-5 px-4 md:px-0 md:pl-14 md:ml-1 font-semibold">
+        Choisissez le livre de votre lecture et de votre imaginaire!
+      </p>
+      <Container>
+        <Swiper
+          modules={[Pagination, Autoplay, A11y]}
+          spaceBetween={0}
+          slidesPerView={1}
+          loop={true}
+          autoplay={{ delay: 2200 }}
+          center={true}
+        >
+          <div data-aos="zoom-in" className="carouss">
+            <SwiperSlide>
+              <img
+                className="image-banner cursor-pointer"
+                src={logo0}
+                alt="la voiture"
+              />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <img
+                className="image-banner cursor-pointer"
+                src={logo1}
+                alt="la voiture"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                className="image-banner cursor-pointer"
+                src={logo2}
+                alt="la voiture"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                className="image-banner cursor-pointer"
+                src={logo3}
+                alt="la voiture"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                className="image-banner cursor-pointer"
+                src={logo4}
+                alt="la voiture"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                className="image-banner cursor-pointer"
+                src={logo5}
+                alt="la voiture"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                className="image-banner cursor-pointer"
+                src={logo6}
+                alt="la voiture"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                className="image-banner cursor-pointer"
+                src={logo7}
+                alt="la voiture"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                className="image-banner cursor-pointer"
+                src={logo8}
+                alt="la voiture"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                className="image-banner cursor-pointer"
+                src={logo7}
+                alt="la voiture"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                className="image-banner cursor-pointer"
+                src={logo9}
+                alt="la voiture"
+              />
+            </SwiperSlide>
+          </div>
+        </Swiper>
+      </Container>
     </div>
   );
 }
