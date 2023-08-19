@@ -25,7 +25,9 @@ function Carousel({slides}) {
         onSwiper={(swiper) => console.log(swiper)}
       >
         <SwiperSlide>
+          <a href="https://www.amazon.fr/Lombre-dun-doute-Boudjeka-KAMTO/dp/9956515035/ref=mp_s_a_1_1?keywords=Boudjeka+KAMTO&qid=1691393857&sr=8-1" target='_blank'>
           <img src={image1} alt="pere et fille " />
+          </a>
         </SwiperSlide>
           
       </Swiper>

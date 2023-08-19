@@ -2,8 +2,7 @@ import React from 'react'
 import { useHistory } from 'react-router-dom';
 import { useTranslation } from 'react-i18next'
 import MobileLogo from "./assets/Logo.png"
-import { UilFacebookF, UilWhatsappAlt , UilTwitter , UilLinkedin  } from '@iconscout/react-unicons'
-
+import { UilFacebookF, UilWhatsappAlt , UilTwitter , UilLinkedin, UilArrowUp } from '@iconscout/react-unicons'
 import './footer.css'
 
 function Footer() {
@@ -19,6 +18,10 @@ function Footer() {
     // }, []);
 
     const History = useHistory();
+
+    const handleTop = ()=>{
+      window.scrollTo(0, 0)
+    }
 
     let AmList={
         en: ["http://ipercash.fr/politiques/aml_en.pdf","http://ipercash.fr/politiques/policy_en.pdf" , "http://ipercash.fr/politiques/terms_en.pdf"],
@@ -66,18 +69,18 @@ function Footer() {
                 <p>Nous contacter</p>
               </ul>
             </div>
-            <div className="md:w-2/12  mt-4 md:mt-0 md:px-5 md:pt-16">
+            <div className="md:w-2/12 relative mt-4 md:mt-0 md:px-5 md:pt-16">
               <b>Suivez-nous</b>
-                <div>
+                <div className='w-10'>
                   <a href='https://web.facebook.com/gribouilage.agencelitteraire' target='_blank'><div className='icon sm:hover:text-blue-600 '>< UilFacebookF  /></div></a>
                   <a href='https://api.whatsapp.com/send?phone=678551893' target='_blank'><div className='icon sm:hover:text-green-600'>< UilWhatsappAlt   /></div></a>
                   <a href='#' ><div className='icon sm:hover:text-blue-600' >< UilTwitter  /></div></a>
                   <a href='#' ><div className='icon sm:hover:text-blue-950'>< UilLinkedin  /></div></a>
                 </div>
-              <ul className="footer-list4 mt-2 md:mt-0 text-left text-leight md:pt-8 pb-5 md:pb-0"></ul>
+              <ul onClick={handleTop} className=' absolute bg-orange-400 bottom-3 right-3  cursor-pointer lg:right-10 text-white w-10 h-10 rounded-md text-3xl '><UilArrowUp size="45" /></ul>
             </div>
           </div>
-          <div className="footer-bottom flex justify-between pl-4 pr-0 md:px-8 py-4 text-slate-500 ">
+          <div className="footer-bottom  flex justify-between pl-4 pr-0 md:px-8 py-4 text-slate-500 ">
             <p>© 2023 Maison polar-edition. Tous droits réservés.</p>
             <p>Designer par <a href='https://api.whatsapp.com/send?phone=678719650' target='_blank'>Will-turner</a></p>
           </div>

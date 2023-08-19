@@ -16,6 +16,7 @@ import Parution from "./parution/Parution"
 import News from './hero/News';
 import slides from '../../info.json'
 import Pricing from './pricing/Pricing';
+import Auteur from './auteur/Auteur';
 
 function Home() {
     React.useEffect(() => {
@@ -35,7 +36,8 @@ function Home() {
         <Aside />
         <Pricing />
         <Agenda />
-        <Auteurs />
+        {/* <Auteurs /> */}
+        <Auteur />
         <Newsletter />
       </div>
     );

@@ -1,198 +1,209 @@
-import * as React from 'react';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardHeader from '@mui/material/CardHeader';
-import CssBaseline from '@mui/material/CssBaseline';
-import Grid from '@mui/material/Grid';
-import StarIcon from '@mui/icons-material/StarBorder';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
-import GlobalStyles from '@mui/material/GlobalStyles';
-import Container from '@mui/material/Container';
+import React from 'react'
 
-// function Copyright(props) {
-//   return (
-//     <Typography variant="body2" color="text.secondary" align="center" {...props}>
-//       {'Copyright © '}
-//       <Link color="inherit" href="https://mui.com/">
-//         Your Website
-//       </Link>{' '}
-//       {new Date().getFullYear()}
-//       {'.'}
-//     </Typography>
-//   );
-// }
-
-const tiers = [
-  {
-    title: 'Free',
-    price: '0',
-    description: [
-      '10 users included',
-      '2 GB of storage',
-      'Help center access',
-      'Email support',
-    ],
-    buttonText: 'Sign up for free',
-    buttonVariant: 'outlined',
-  },
-  {
-    title: 'Pro',
-    subheader: 'Most popular',
-    price: '15',
-    description: [
-      '20 users included',
-      '10 GB of storage',
-      'Help center access',
-      'Priority email support',
-    ],
-    buttonText: 'Get started',
-    buttonVariant: 'contained',
-  },
-  {
-    title: 'Enterprise',
-    price: '30',
-    description: [
-      '50 users included',
-      '30 GB of storage',
-      'Help center access',
-      'Phone & email support',
-    ],
-    buttonText: 'Contact us',
-    buttonVariant: 'outlined',
-  },
-];
-
-
-
-// TODO remove, this demo shouldn't need to reset the theme.
-const defaultTheme = createTheme();
-
-	const theme = createTheme({
-		palette: {
-		  orange: {
-			main: '#FF8C00',
-			darker: '#FDBA74',
-		  },
-		  neutral: {
-			main: '#64748B',
-			contrastText: '#fff',
-		  },
-		},
-	  });
-
-export default function Pricing() {
+const Pricing = () => {
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <GlobalStyles
-        styles={{ ul: { margin: 0, padding: 0, listStyle: "none" } }}
-      />
-      <CssBaseline />
-      <AppBar
-        position="static"
-        color="default"
-        elevation={0}
-        sx={{ borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
-      >
-        <Toolbar sx={{ flexWrap: "wrap" }}></Toolbar>
-      </AppBar>
-      {/* Hero unit */}
-      <Container
-        disableGutters
-        maxWidth="sm"
-        component="main"
-        sx={{ pt: 8, pb: 6 }}
-      >
-        <h2 className='text-center text-2xl font-bold sm:text-5xl md:text-6xl py-4'> Prix Abonnement</h2>
-        <Typography
-          variant="h5"
-          align="center"
-          color="text.secondary"
-          component="p"
-          mx={2}
-        >
-          Choisissez Votre formule d'abonnement Chez Polar-Edition et beneficiez
-          des meilleurs Livres Editer et Publier Chez Nous et Par Nos
-          Partenaires
-        </Typography>
-      </Container>
-      {/* End hero unit */}
-      <Container maxWidth="md" component="main">
-        <Grid container spacing={5} alignItems="flex-end">
-          {tiers.map((tier) => (
-            // Enterprise card is full width at sm breakpoint
-            <Grid
-              item
-              key={tier.title}
-              xs={12}
-              sm={tier.title === "Enterprise" ? 12 : 6}
-              md={4}
-            >
-              <Card>
-                <CardHeader
-                   
-                  title={tier.title}
-                  subheader={tier.subheader}
-                  titleTypographyProps={{ align: "center" }}
-                  action={tier.title === "Pro" ? <StarIcon /> : null}
-                  subheaderTypographyProps={{
-                    align: "center",
-                  }}
-                  sx={{
-                    backgroundColor: (theme) =>
-                      theme.palette.warning.light
-                      
-                  }}
-                />
-                <CardContent>
-                  <Box
-                    sx={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "baseline",
-                      mb: 2,
-                    }}
-                  >
-                    <Typography
-                      component="h2"
-                      variant="h3"
-                      color="text.primary"
-                    >
-                      ${tier.price}
-                    </Typography>
-                    <Typography variant="h6" color="text.secondary">
-                      /mo
-                    </Typography>
-                  </Box>
-                  <ul>
-                    {tier.description.map((line) => (
-                      <Typography
-                        component="li"
-                        variant="subtitle1"
-                        align="center"
-                        key={line}
-                      >
-                        {line}
-                      </Typography>
-                    ))}
-                  </ul>
-                </CardContent>
-                <CardActions>
-                  <Button fullWidth variant={tier.buttonVariant} color={'warning'} >
-                    {tier.buttonText}
-                  </Button>
-                </CardActions>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
-    </ThemeProvider>
+    <div class="flex flex-col items-center justify-center min-h-screen p-10 text-orange-700 bg-orange-400 md:p-20">
+      <h2 class="text-2xl md:text-4xl font-bold text-gray-900">Prix Abonnement</h2>
+      <p className='text-gray-900'>Choisissez votre formule et beneficiez de nos oeuvres</p>
+
+      <div class="flex flex-wrap items-center justify-center w-full max-w-4xl mt-8">
+        <div class="flex flex-col flex-grow mt-8 overflow-hidden bg-white rounded-lg shadow-lg">
+          <div class="flex flex-col items-center p-10 bg-gray-200">
+            <span class="font-semibold">Padawan</span>
+            <div class="flex items-center">
+              <span class="text-3xl">$</span>
+              <span class="text-5xl font-bold">20</span>
+              <span class="text-2xl text-orange-400">/mo</span>
+            </div>
+          </div>
+          <div class="p-10">
+            <ul>
+              <li class="flex items-center">
+                <svg
+                  class="w-5 h-5 text-green-600 fill-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span class="ml-2">Lightsaber</span>
+              </li>
+              <li class="flex items-center">
+                <svg
+                  class="w-5 h-5 text-green-600 fill-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span class="ml-2">Robe</span>
+              </li>
+              <li class="flex items-center">
+                <svg
+                  class="w-5 h-5 text-green-600 fill-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span class="ml-2">Insurance</span>
+              </li>
+            </ul>
+          </div>
+          <div class="flex px-10 pb-10 justfy-center">
+            <button class="font-bold hover:bg-gray-300 flex items-center justify-center w-full h-12 px-6 text-sm uppercase bg-gray-200 rounded-lg">
+              S'inscrire
+            </button>
+          </div>
+        </div>
+
+        <div class="z-10 flex flex-col flex-grow mt-8 overflow-hidden transform bg-white rounded-lg shadow-lg md:scale-110">
+          <div class="flex flex-col items-center p-10 bg-gray-200">
+            <span class="font-semibold">Jedi Knight</span>
+            <div class="flex items-center">
+              <span class="text-3xl">$</span>
+              <span class="text-6xl font-bold">50</span>
+              <span class="text-2xl text-gray-500">/mo</span>
+            </div>
+          </div>
+          <div class="p-10">
+            <ul>
+              <li class="flex items-center">
+                <svg
+                  class="w-5 h-5 text-green-600 fill-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span class="ml-2 italic">Padawan +</span>
+              </li>
+              <li class="flex items-center">
+                <svg
+                  class="w-5 h-5 text-green-600 fill-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span class="ml-2">Solo missions</span>
+              </li>
+              <li class="flex items-center">
+                <svg
+                  class="w-5 h-5 text-green-600 fill-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span class="ml-2">Utility belt</span>
+              </li>
+            </ul>
+          </div>
+          <div class="flex px-10 pb-10 justfy-center">
+            <button class="font-bold hover:bg-gray-300 flex items-center justify-center w-full h-12 px-6 text-sm uppercase bg-gray-200 rounded-lg">
+              S'inscrire
+            </button>
+          </div>
+        </div>
+
+        <div class="flex flex-col flex-grow overflow-hidden bg-white rounded-lg shadow-lg mt-19">
+          <div class="flex flex-col items-center p-10 bg-gray-200">
+            <span class="font-semibold">Jedi Master</span>
+            <div class="flex items-center">
+              <span class="text-3xl">$</span>
+              <span class="text-5xl font-bold">99</span>
+              <span class="text-2xl text-gray-500">/mo</span>
+            </div>
+          </div>
+          <div class="p-10">
+            <ul>
+              <li class="flex items-center">
+                <svg
+                  class="w-5 h-5 text-green-600 fill-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span class="ml-2 italic">Jedi Knight +</span>
+              </li>
+              <li class="flex items-center">
+                <svg
+                  class="w-5 h-5 text-green-600 fill-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span class="ml-2">Sit on council</span>
+              </li>
+              <li class="flex items-center">
+                <svg
+                  class="w-5 h-5 text-green-600 fill-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span class="ml-2">Stock options</span>
+              </li>
+            </ul>
+          </div>
+          <div class="flex px-10 pb-10 justfy-center">
+            <button class="font-bold hover:bg-gray-300 flex items-center justify-center w-full h-12 px-6 text-sm uppercase bg-gray-200 rounded-lg">
+              S'inscrire
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
+
+export default Pricing

@@ -66,11 +66,14 @@ function More() {
               />
             </SwiperSlide>
             <SwiperSlide>
+              <a href="https://www.amazon.fr/LULA-aime-livres-Boudjeka-KAMTO-ebook/dp/B0CFB452MP/ref=mp_s_a_1_1?crid=3GBS56R5YQAT3&keywords=lula+aime+les+livres&qid=1692008040&sprefix=%2Caps%2C215&sr=8-1" target="_blank">
               <img
                 className="image-banner cursor-pointer"
                 src={logo4}
                 alt="la voiture"
               />
+              </a>
+              
             </SwiperSlide>
             <SwiperSlide>
               <img
@@ -108,11 +111,13 @@ function More() {
               />
             </SwiperSlide>
             <SwiperSlide>
+              <a href="https://amzn.eu/d/5iLlP6Z" target="_blank">
               <img
                 className="image-banner cursor-pointer"
                 src={logo9}
                 alt="la voiture"
               />
+              </a>
             </SwiperSlide>
           </div>
         </Swiper>

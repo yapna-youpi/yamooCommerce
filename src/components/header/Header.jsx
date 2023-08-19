@@ -54,7 +54,7 @@ function Header() {
         <div className="hidden md:block md:w-7/12">
           <Banner data={1} Logo={LogoBooks} slides={slides} />
         </div>
-        <div className="hidden md:block cursor-pointer  text-gray-200 py-7  md:w-1/12 items-center flex-col">
+        <div onClick={() => nav("/login")} className="hidden md:block cursor-pointer  text-gray-200 py-7  md:w-1/12 items-center flex-col">
         {/* s */}
           <UilUser size="60" color="#ffffff"  />
           <h3>Compte</h3>
