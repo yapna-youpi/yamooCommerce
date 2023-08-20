@@ -35,9 +35,9 @@ function Home() {
         <Parution />
         <Aside />
         <Pricing />
+        <Auteur />
         <Agenda />
         {/* <Auteurs /> */}
-        <Auteur />
         <Newsletter />
       </div>
     );
