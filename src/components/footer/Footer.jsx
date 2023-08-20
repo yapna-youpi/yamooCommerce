@@ -35,7 +35,7 @@ function Footer() {
           <div className="footer-content pl-5 pr-4 md:pl-0 md:pr-0 md:pb-5 flex flex-col w-full md:rounded-t-3xl  text-leight md:flex-row md:justify-around  ">
             <div className=" md:w-5/12  text-left md:px-10 md:py-5 ">
               <div className="py-5 pl-12">
-                <img className='w-16 h-16 md:w-36 md:h-36 ' src={MobileLogo} alt="la maison du polar" />
+                <img className='w-16 h-16 md:w-48 md:h-36 ' src={MobileLogo} alt="la maison du polar" />
               </div>
               <p className=" md:mt-2">
                 La Maison Polar-Edition mets un point d’honneur sur la littérature pour enfant
@@ -59,7 +59,7 @@ function Footer() {
                 <li>Les 40 secrets du bonheur intime</li>
               </ul>
             </div>
-            <div className=" md:w-2/12 mt-4 md:mt-0  md:px-5 md:pt-16 ">
+            <div className=" md:w-3/12 mt-4 md:mt-0  md:px-5 md:pt-16 ">
               <b>À propos</b>
               <ul className="footer-list3 mt-2 md:mt-0 text-left text-leight md:pt-8 event:cursor-pointer">
                 <p onClick={()=>History.push('/histoire')}>Qui sommes-nous ?</p>

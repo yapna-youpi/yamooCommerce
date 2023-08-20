@@ -1,16 +1,12 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, A11y, EffectFade, Autoplay, Pagination } from "swiper";
-import logo0 from "../assets/la_voiture.PNG"
-import logo1 from "../assets/le_petit_remi.PNG"
-import logo2 from "../assets/Couverture_chambre.png"
-import logo3 from "../assets/Couverture_kiti.png"
-import logo4 from "../assets/Couverture_lula.png"
-import logo5 from "../assets/foguien.PNG"
-import logo6 from "../assets/le_porc_et_la_tortue.PNG"
-import logo7 from "../assets/le_tamtam_magique.PNG"
-import logo8 from "../assets/magloire.PNG"
-import logo9 from "../assets/la_main.jpeg"
+import logo0 from "../../../Data/livre_affiche/chambre.jpeg"
+import logo1 from "../../../Data/livre_affiche/magloire.jpeg"
+import logo2 from "../../../Data/livre_affiche/porc.jpeg"
+import logo3 from "../../../Data/livre_affiche/remi.jpeg"
+import logo4 from "../../../Data/livre_affiche/tamtam.jpeg"
+import logo5 from "../../../Data/livre_affiche/voiture.jpeg"
 // import logo7 from "../assets/le_tamtam_magique.PNG"
 
 import "swiper/swiper-bundle.css";
@@ -82,43 +78,13 @@ function More() {
                 alt="la voiture"
               />
             </SwiperSlide>
-            <SwiperSlide>
+            {/* <SwiperSlide>
               <img
                 className="image-banner cursor-pointer"
                 src={logo6}
                 alt="la voiture"
               />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                className="image-banner cursor-pointer"
-                src={logo7}
-                alt="la voiture"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                className="image-banner cursor-pointer"
-                src={logo8}
-                alt="la voiture"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                className="image-banner cursor-pointer"
-                src={logo7}
-                alt="la voiture"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <a href="https://amzn.eu/d/5iLlP6Z" target="_blank">
-              <img
-                className="image-banner cursor-pointer"
-                src={logo9}
-                alt="la voiture"
-              />
-              </a>
-            </SwiperSlide>
+            </SwiperSlide> */}
           </div>
         </Swiper>
       </Container>

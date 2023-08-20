@@ -9,6 +9,7 @@ import {
   UilShoppingCartAlt,
   UilUser,
   UilMapPin,
+  UilNewspaper , 
 } from "@iconscout/react-unicons";
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
@@ -63,14 +64,14 @@ function Header() {
          
 
       <div className="header-bottom flex w-full justify-between pt-5">
-        <nav className="md:w-5/12 pl-5">
+        <nav className="md:w-6/12 pl-5">
           <div
             id="menu"
             ref={menuref}
             className="menu flex h-full pt-20 md:pt-0  md:h-10 fixed z-40 top-0 left-0  justify-center mx-auto  ml-0 md:relative w-full text-white bg-darkorange 
                       hover:bg-contain md:bg-inherit py-7 md:py-0 px-15"
           >
-            <ul className="md:flex md:text-darker font-bold md:justify-between items-center w-96">
+            <ul className="md:flex md:text-darker font-bold md:justify-between items-center">
               <li
                 onClick={() => nav("/")}
                 className="menu-li"
@@ -87,6 +88,15 @@ function Header() {
                 LIBRAIRIE
                 <div className="rounded-full w-10 h-10 flex justify-center items-center bg-cyan-600 md:hidden">
                   <UilShoppingCartAlt />
+                </div>
+              </li>
+              <li
+                onClick={() => nav("kiosque")}
+                className="menu-li"
+              >
+                KIOSQUE
+                <div className="rounded-full w-10 h-10 flex justify-center items-center bg-cyan-600 md:hidden">
+                  <UilNewspaper />
                 </div>
               </li>
               <li
@@ -131,7 +141,7 @@ function Header() {
                 {/* <p className="text-darker cursor-pointer">
                   kboudjeka@gmail.com
                 </p> */}
-                <p className="text-indigo-700">Écrivez-nous</p>
+                <p className="text-indigo-700 font-serif">Écrivez-nous</p>
               </div>
             </a>
           </div>
@@ -146,7 +156,7 @@ function Header() {
             >
               <div>
                 {/* <p className="text-darker cursor-pointer">678 55 18 93</p> */}
-                <p className="text-indigo-700">Appelez le service client.</p>
+                <p className="text-indigo-700 font-serif">Appelez le service client.</p>
               </div>
             </a>
           </div>

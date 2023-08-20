@@ -11,6 +11,8 @@ import Contact from '../components/contact/Contact'
 import Login from "../components/login/Login"
 import Histoire from "../components/histoire/Histoire"
 import Error from '../components/Error/404';
+import Kiosque from '../components/kiosque/Kiosque';
+import LivreDetail from '../components/livreDetail/LivreDetail';
 
 function Main({ User, Country }) {
 
@@ -29,7 +31,9 @@ function Main({ User, Country }) {
                     <Route path='/contact' exact component={Contact} />
                     <Route path='/login' exact component={Login} />
                     <Route path='/librairie' exact component={Boutique} />
+                    <Route path='/LivreDetail' exact component={LivreDetail} />
                     <Route path='/histoire' exact component={Histoire} />
+                    <Route path='/kiosque' exact component={Kiosque} />
                     <Route path='*' component={Error} />
                 </Switch>
                 <Footer />

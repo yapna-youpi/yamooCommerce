@@ -3,8 +3,9 @@
   src: url("./components/addons//fonts/Montserrat-Regular.ttf");
 }
 :root {
+  --color-theme: #FB923C;
   --gold:#EAB107;
-  gold-sombre: #A48B31;
+  --gold-sombre: #A48B31;
   --yellow-first: #9ACD32;
   --vert: #51C124;
   --bleu: #0090B5;
@@ -313,7 +314,6 @@
       left: 7.5%;
   }
 }
-
 
 @media only screen and ( max-width:768px ) {
   .menu {

@@ -1,12 +1,12 @@
 import React from 'react'
 
-const BoutiqueCard = () => {
+const BoutiqueCard = ({data}) => {
   return (
     <div tabindex="0" class="focus:outline-none mx-2 w-72 xl:mb-0 mb-8">
       <div>
         <img
-          alt="person capturing an image"
-          src="https://cdn.tuk.dev/assets/templates/classified/Bitmap (1).png"
+          alt={data.productName}
+          src={data.imgUrl}
           tabindex="0"
           class="focus:outline-none w-full h-44"
         />
@@ -31,43 +31,42 @@ const BoutiqueCard = () => {
               <path d="M9 4h6a2 2 0 0 1 2 2v14l-5-3l-5 3v-14a2 2 0 0 1 2 -2"></path>
             </svg>
           </div>
-          <div class="bg-yellow-200 py-1.5 px-6 rounded-full">
-            <p tabindex="0" class="focus:outline-none text-xs text-yellow-700">
-              Featured
+          <div class="bg-orange-400 hover:bg-orange-300 cursor-pointer py-1.5 px-6 rounded-full">
+            <p tabindex="0" class=" focus:outline-none text-xs  text-yellow-700">
+              Acquérir
             </p>
           </div>
         </div>
         <div class="p-4">
           <div class="flex items-center">
             <h2 tabindex="0" class="focus:outline-none text-lg font-semibold">
-              iphone XS
+             {data.productName}
             </h2>
             <p
               tabindex="0"
               class="focus:outline-none text-xs text-gray-600 pl-5"
             >
-              4 days ago
+              {data.years} days ago
             </p>
           </div>
           <p tabindex="0" class="focus:outline-none text-xs text-gray-600 mt-2">
-            The Apple iPhone XS is available in 3 colors with 64GB memory. Shoot
-            amazing videos
+            {data.shortDesc}
           </p>
           <div class="flex mt-4">
             <div>
               <p
                 tabindex="0"
-                class="focus:outline-none text-xs text-gray-600 px-2 bg-gray-200 py-1"
+                class="cursor-pointer focus:outline-none text-xs hover:bg-gray-100  font-bold  text-orange-600 px-2 py-1 md:px-3 bg-gray-200 md:py-2"
               >
-                12 months warranty
+                S'abonner et lire
               </p>
             </div>
             <div class="pl-2">
               <p
                 tabindex="0"
-                class="focus:outline-none text-xs text-gray-600 px-2 bg-gray-200 py-1"
+                class="cursor-pointer focus:outline-none text-xs hover:bg-gray-100 font-bold  text-orange-600 px-2 py-1 md:px-3 bg-gray-200 md:py-2"
               >
-                Complete box
+                Description
               </p>
             </div>
           </div>
@@ -76,7 +75,7 @@ const BoutiqueCard = () => {
               tabindex="0"
               class="focus:outline-none text-indigo-700 text-xs font-semibold"
             >
-              Bay Area, San Francisco
+              {data.author}
             </h2>
             <h3
               tabindex="0"
