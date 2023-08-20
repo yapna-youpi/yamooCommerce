@@ -8,7 +8,7 @@ const BoutiqueCard = ({data}) => {
           alt={data.productName}
           src={data.imgUrl}
           tabindex="0"
-          class="focus:outline-none w-full h-44"
+          class="focus:outline-none w-full h-44 cursor-pointer"
         />
       </div>
       <div class="bg-white">

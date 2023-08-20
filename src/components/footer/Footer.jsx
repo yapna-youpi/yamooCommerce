@@ -81,8 +81,8 @@ function Footer() {
             </div>
           </div>
           <div className="footer-bottom  flex justify-between pl-4 pr-0 md:px-8 py-4 text-slate-500 ">
-            <p>© 2023 Maison polar-edition. Tous droits réservés.</p>
-            <p>Designer par <a href='https://api.whatsapp.com/send?phone=678719650' target='_blank'>Will-turner</a></p>
+            <p>© {new Date().getFullYear()} Gribouillage-Press. Tous droits réservés.</p>
+            <p>Designer par <a className='text-white' href='https://api.whatsapp.com/send?phone=678719650' target='_blank'>Will-turner</a></p>
           </div>
         </footer>
         {/* <div>bg-visible</div> */}
