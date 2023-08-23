@@ -1,10 +1,27 @@
-import React from 'react'
+import React,{useState} from 'react'
+import Modals from '../../addons/modal/Modals';
 
 const BoutiqueCard = ({data}) => {
+
+  const [open, setOpen] = useState(false)
+  const handleClose = ()=>{
+    setOpen(false)
+  }
+
   return (
     <div tabindex="0" class="focus:outline-none mx-2 w-72 xl:mb-0 mb-8">
+      <Modals open={open} onCloseModal={handleClose} center>
+        <img
+          alt={data.productName}
+          src={data.imgUrl}
+          tabindex="0"
+          class="focus:outline-none w-full h-72 cursor-pointer"
+        />
+        <h2>very good thing</h2>
+      </Modals>
       <div>
         <img
+          onClick={() => setOpen(true)}
           alt={data.productName}
           src={data.imgUrl}
           tabindex="0"
@@ -32,7 +49,10 @@ const BoutiqueCard = ({data}) => {
             </svg>
           </div>
           <div class="bg-orange-400 hover:bg-orange-300 cursor-pointer py-1.5 px-6 rounded-full">
-            <p tabindex="0" class=" focus:outline-none text-xs  text-yellow-700">
+            <p
+              tabindex="0"
+              class=" focus:outline-none text-xs  text-yellow-700"
+            >
               Acquérir
             </p>
           </div>
@@ -40,7 +60,7 @@ const BoutiqueCard = ({data}) => {
         <div class="p-4">
           <div class="flex items-center">
             <h2 tabindex="0" class="focus:outline-none text-lg font-semibold">
-             {data.productName}
+              {data.productName}
             </h2>
             <p
               tabindex="0"
