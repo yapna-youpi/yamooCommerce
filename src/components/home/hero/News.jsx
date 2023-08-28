@@ -8,7 +8,7 @@ import img4 from "../assets/Logo_Bibliothèque-Africaine-du-Théâtre.png";
 function News() {
 
   return (
-    <div className="bg-orange-300 pb-8 mb-20">
+    <div className="bg-orange-400 pb-8 mb-20">
       <div className="hero">
 
       </div>

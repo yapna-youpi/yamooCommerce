@@ -11,9 +11,9 @@ const Pricing = () => {
           <div class="flex flex-col items-center p-10 bg-gray-200">
             <span class="font-semibold">Padawan</span>
             <div class="flex items-center">
-              <span class="text-3xl">$</span>
-              <span class="text-5xl font-bold">20</span>
-              <span class="text-2xl text-orange-400">/mo</span>
+              <span class="text-3xl">Xaf</span>
+              <span class="text-5xl font-bold">100</span>
+              <span class="text-2xl text-gray-500">/jr</span>
             </div>
           </div>
           <div class="p-10">
@@ -31,7 +31,7 @@ const Pricing = () => {
                     clip-rule="evenodd"
                   />
                 </svg>
-                <span class="ml-2">Lightsaber</span>
+                <span class="ml-2">Accèss 1jr</span>
               </li>
               <li class="flex items-center">
                 <svg
@@ -46,7 +46,7 @@ const Pricing = () => {
                     clip-rule="evenodd"
                   />
                 </svg>
-                <span class="ml-2">Robe</span>
+                <span class="ml-2">Lecture</span>
               </li>
               <li class="flex items-center">
                 <svg
@@ -61,7 +61,7 @@ const Pricing = () => {
                     clip-rule="evenodd"
                   />
                 </svg>
-                <span class="ml-2">Insurance</span>
+                <span class="ml-2">Commentaire</span>
               </li>
             </ul>
           </div>
@@ -76,9 +76,9 @@ const Pricing = () => {
           <div class="flex flex-col items-center p-10 bg-gray-200">
             <span class="font-semibold">Jedi Knight</span>
             <div class="flex items-center">
-              <span class="text-3xl">$</span>
-              <span class="text-6xl font-bold">50</span>
-              <span class="text-2xl text-gray-500">/mo</span>
+              <span class="text-3xl">Xaf</span>
+              <span class="text-6xl font-bold">500</span>
+              <span class="text-2xl text-gray-500">/sem</span>
             </div>
           </div>
           <div class="p-10">
@@ -96,7 +96,7 @@ const Pricing = () => {
                     clip-rule="evenodd"
                   />
                 </svg>
-                <span class="ml-2 italic">Padawan +</span>
+                <span class="ml-2 italic">Accèss 1 semaine</span>
               </li>
               <li class="flex items-center">
                 <svg
@@ -111,7 +111,7 @@ const Pricing = () => {
                     clip-rule="evenodd"
                   />
                 </svg>
-                <span class="ml-2">Solo missions</span>
+                <span class="ml-2">Lecture de livres</span>
               </li>
               <li class="flex items-center">
                 <svg
@@ -126,7 +126,7 @@ const Pricing = () => {
                     clip-rule="evenodd"
                   />
                 </svg>
-                <span class="ml-2">Utility belt</span>
+                <span class="ml-2">Soumission d'ouvrages</span>
               </li>
             </ul>
           </div>
@@ -141,9 +141,9 @@ const Pricing = () => {
           <div class="flex flex-col items-center p-10 bg-gray-200">
             <span class="font-semibold">Jedi Master</span>
             <div class="flex items-center">
-              <span class="text-3xl">$</span>
-              <span class="text-5xl font-bold">99</span>
-              <span class="text-2xl text-gray-500">/mo</span>
+              <span class="text-3xl">Xaf</span>
+              <span class="text-5xl font-bold">1500 </span>
+              <span class="text-2xl text-gray-500">/mois</span>
             </div>
           </div>
           <div class="p-10">
@@ -161,7 +161,7 @@ const Pricing = () => {
                     clip-rule="evenodd"
                   />
                 </svg>
-                <span class="ml-2 italic">Jedi Knight +</span>
+                <span class="ml-2 italic">Accèss 1 mois ilimité</span>
               </li>
               <li class="flex items-center">
                 <svg
@@ -176,7 +176,7 @@ const Pricing = () => {
                     clip-rule="evenodd"
                   />
                 </svg>
-                <span class="ml-2">Sit on council</span>
+                <span class="ml-2">Lecture des livres</span>
               </li>
               <li class="flex items-center">
                 <svg
@@ -191,7 +191,7 @@ const Pricing = () => {
                     clip-rule="evenodd"
                   />
                 </svg>
-                <span class="ml-2">Stock options</span>
+                <span class="ml-2">Echange avec auteur</span>
               </li>
             </ul>
           </div>

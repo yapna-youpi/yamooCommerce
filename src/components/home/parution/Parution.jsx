@@ -31,7 +31,7 @@ function Auteurs() {
     ];
 
   return (
-    <>
+    < div className='my-16'>
       <h2 className="font-semibold px-4 mt-4  text-4xl md:mt-16 md:pl-14 md:ml-1 ">
         Dernières Parutions
       </h2>
@@ -46,7 +46,7 @@ function Auteurs() {
         {/* <Card data={LivreParu[3]} imag={tof4} value={5} /> */}
         {/* <Card data={data} imag="https://picsum.photos/400/484" /> */}
       </div>
-    </>
+    </div>
   );
 }
 
