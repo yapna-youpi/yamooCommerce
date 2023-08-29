@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import Modals from '../../addons/modal/Modals';
 
 const BoutiqueCard = ({data}) => {
@@ -7,6 +8,8 @@ const BoutiqueCard = ({data}) => {
   const handleClose = ()=>{
     setOpen(false)
   }
+
+  const history = useHistory()
 
   return (
     <div tabindex="0" class="focus:outline-none mx-2 w-72 xl:mb-0 mb-8">
@@ -17,8 +20,31 @@ const BoutiqueCard = ({data}) => {
           tabindex="0"
           class="focus:outline-none w-full h-72 cursor-pointer"
         />
-        <h2>very good thing</h2>
+        <div class="pl-2">
+          <div class="flex items-center mt-3">
+            <h2 tabindex="0" class="focus:outline-none text-xl font-bold">
+              {data.productName}
+            </h2>
+            <p
+              tabindex="0"
+              class="focus:outline-none text-xs text-gray-600 pl-5"
+            >
+              {data.years} days ago
+            </p>
+          </div>
+          <p tabindex="0" class="md:w-96  focus:outline-none text-xs text-gray-600 mt-2">
+            {data.shortDesc}
+          </p>
+          <p
+            onClick={() => history.push(`/librairie/${data.id}`)}
+            tabindex="0"
+            class="cursor-pointer bg-orange-400 hover:bg-orange-300 text-yellow-700 py-1.5 px-6 rounded-full w-4/12 text-center my-3 focus:outline-none text-xs  font-bold  md:px-3 md:py-2"
+          >
+            Lecture
+          </p>
+        </div>
       </Modals>
+
       <div>
         <img
           onClick={() => setOpen(true)}
@@ -83,6 +109,7 @@ const BoutiqueCard = ({data}) => {
             </div>
             <div class="pl-2">
               <p
+                onClick={() => setOpen(true)}
                 tabindex="0"
                 class="cursor-pointer focus:outline-none text-xs hover:bg-gray-100 font-bold  text-orange-600 px-2 py-1 md:px-3 bg-gray-200 md:py-2"
               >

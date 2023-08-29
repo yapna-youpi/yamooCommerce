@@ -31,7 +31,7 @@ function Main({ User, Country }) {
                     <Route path='/contact' exact component={Contact} />
                     <Route path='/login' exact component={Login} />
                     <Route path='/librairie' exact component={Boutique} />
-                    <Route path='/LivreDetail' exact component={LivreDetail} />
+                    <Route path='/librairie/:id' exact component={LivreDetail} />
                     <Route path='/histoire' exact component={Histoire} />
                     <Route path='/kiosque' exact component={Kiosque} />
                     <Route path='*' component={Error} />

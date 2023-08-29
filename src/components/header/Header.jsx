@@ -82,7 +82,7 @@ function Header() {
                 </div>
               </li>
               <li
-                onClick={() => nav("librairie")}
+                onClick={() => nav("/librairie")}
                 className="menu-li"
               >
                 LIBRAIRIE
@@ -91,7 +91,7 @@ function Header() {
                 </div>
               </li>
               <li
-                onClick={() => nav("kiosque")}
+                onClick={() => nav("/kiosque")}
                 className="menu-li"
               >
                 KIOSQUE
@@ -100,7 +100,7 @@ function Header() {
                 </div>
               </li>
               <li
-                onClick={() => nav("contact")}
+                onClick={() => nav("/contact")}
                 className="menu-li"
               >
                 CONTACT

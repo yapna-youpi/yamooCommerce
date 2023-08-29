@@ -7,14 +7,21 @@ import productImg06 from "./livres/remi.png";
 import productImg07 from "./livres/tamtam.png";
 import productImg08 from "./livres/tortue.png";
 import productImg09 from "./livres/voiture.png";
+import productImg10 from "./livres/Kiti.png";
+import productImg11 from "./livres/Muna.png";
+
+import livre03 from '../Data/livres/epub/Lula.epub'
+import livre10 from '../Data/livres/epub/Lula.epub'
+import livre11 from '../Data/livres/epub/Lula.epub'
 
 const products = [
   {
-    id: "01",
+    id: "1",
     productName: "La chambre secrète",
     imgUrl: productImg01,
     category: "populaire",
     price: 2500,
+    epub: 0,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -30,11 +37,12 @@ const products = [
   },
 
   {
-    id: "02",
+    id: "2",
     productName: "Foguien",
     imgUrl: productImg02,
     category: "bestSeller",
     price: 2650,
+    epub: 0,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -54,11 +62,12 @@ const products = [
   },
 
   {
-    id: "03",
-    productName: "Lula",
+    id: "3",
+    productName: "Lula aime les livres ",
     imgUrl: productImg03,
     category: "populaire",
     price: 3500,
+    epub: 1,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -82,6 +91,7 @@ const products = [
     imgUrl: productImg04,
     category: "bestSeller",
     price: 2530,
+    epub: 0,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -100,11 +110,12 @@ const products = [
     author: "GNYNDON TAYI",
   },
   {
-    id: "05",
+    id: "5",
     productName: "La main tendu",
     imgUrl: productImg05,
     category: "populaire",
     price: 2450,
+    epub: 0,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -124,11 +135,12 @@ const products = [
   },
 
   {
-    id: "06",
+    id: "6",
     productName: "Le petit Remi",
     imgUrl: productImg06,
     category: "bestSeller",
     price: 2600,
+    epub: 0,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -148,11 +160,12 @@ const products = [
   },
 
   {
-    id: "07",
+    id: "7",
     productName: "Le tamtam Magique",
     imgUrl: productImg07,
     category: "bestSeller",
     price: 2700,
+    epub: 0,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -171,11 +184,12 @@ const products = [
     author: "Boudjeka kamto",
   },
   {
-    id: "08",
+    id: "8",
     productName: "Le porc et La tortue",
     imgUrl: productImg08,
     category: "populaire",
     price: 1300,
+    epub: 0,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -193,13 +207,61 @@ const products = [
     years: 4.7,
     author: "GNYNDON TAYI",
   },
-
   {
     id: "9",
-    productName: "You & Me Diffuseur",
+    productName: "La voiture de jojo",
     imgUrl: productImg09,
     category: "populaire",
     price: 2800,
+    epub: 0,
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+    reviews: [
+      {
+        rating: 4.6,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+      {
+        rating: 4.9,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+    ],
+    years: 4.7,
+    author: "Tiomasta Fopa",
+  },
+  {
+    id: "10",
+    productName: "Kiti",
+    imgUrl: productImg10,
+    category: "populaire",
+    price: 2800,
+    epub: 1,
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+    reviews: [
+      {
+        rating: 4.6,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+      {
+        rating: 4.9,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+    ],
+    years: 4.7,
+    author: "Tiomasta Fopa",
+  },
+  {
+    id: "11",
+    productName: "Muna",
+    imgUrl: productImg11,
+    category: "populaire",
+    price: 2800,
+    epub: 1,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:

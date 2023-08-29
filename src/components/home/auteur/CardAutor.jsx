@@ -17,7 +17,7 @@ const CardAutor = ({author}) => {
           {author.desc}
         </p>
         <div class="flex justify-start space-x-2">
-          <a href="https://web.facebook.com/gribouilage.agencelitteraire" target='_blank' class="text-gray-500 hover:text-gray-600">
+          <a href={author.url} target='_blank' class="text-gray-500 hover:text-gray-600">
             <svg
               class="w-6 h-6"
               aria-hidden="true"
