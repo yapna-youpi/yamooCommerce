@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import Modals from '../../addons/modal/Modals'
 
 import image from "../assets/magap.png"
+import etoile from '../../../Data/images/etoile.svg'
 
 function Aside() {
 
@@ -34,7 +35,9 @@ function Aside() {
         <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
           <div class="md:pr-12">
             <div class="text-darkorange p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-darkorange mt-8">
-              <i class="fas fa-rocket text-xl"></i>
+              <i class="fas fa-rocket text-xl">
+                <img src={etoile} alt='edition etoile' />
+              </i>
             </div>
             <h3 class="text-3xl font-semibold">
               “Etoiles de l'edition Camerounaise 2023”

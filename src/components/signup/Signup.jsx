@@ -13,12 +13,7 @@ const Signup = ({setLoading}) => {
   const [signupMail,setSignupMail] = useState('')
   const [signupPhone,setSignupPhone] = useState('')
   const [signupPassword,setSignupPassword] = useState('')
-  const [file,setFile] = useState(null)
 
-   //function to active upload file
-   const handleFile = ()=>{
-    document.getElementById("file").click()
-  }
 
   //function to signup with authentification 
   const signup = async (e) =>{
@@ -74,17 +69,6 @@ const Signup = ({setLoading}) => {
             placeholder="Password"
           />
           <i class="ri-mail-fill"></i>
-          <div className="formGroup">
-            <label onClick={handleFile} className="label_file">
-              Choisir un fichier
-            </label>
-            <input
-              className="input_file"
-              onChange={(e) => setFile(e.target.files[0])}
-              type="file"
-              id="file"
-            />
-          </div>
           <input
             type="submit"
             name="submit"

@@ -1,8 +1,9 @@
-import React,{useRef} from 'react'
+import React,{useState,useRef} from 'react'
 
 const Contact = () => {
 
   const formRef = useRef(null)
+  const [file,setFile] = useState(null)
   
   const handleForm = (e)=> {
     e.preventDefault();
@@ -49,6 +50,11 @@ const Contact = () => {
       });
   }
 
+  //function to active upload file
+  const handleFile = ()=>{
+    document.getElementById("file").click()
+  }
+
   return (
     <div class="flex items-center min-h-screen bg-orange-200 dark:bg-gray-900">
       <div class="container mx-auto">
@@ -62,14 +68,13 @@ const Contact = () => {
             </p>
           </div>
           <div class="m-7">
-            <form 
-            ref={formRef}
+            <form
+              ref={formRef}
               // action="https://api.web3forms.com/submit"
               // method="POST"
               id="form"
               onSubmit={handleForm}
             >
-              
               <div class="mb-6">
                 <label
                   for="name"
@@ -134,6 +139,17 @@ const Contact = () => {
                   class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-orange-200 focus:border-orange-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
                   required
                 ></textarea>
+              </div>
+              <div className="formGroup my-3">
+                <label onClick={handleFile} className=" my-3">
+                  Choisir un fichier
+                </label>
+                <input
+                  className="input_file"
+                  onChange={(e) => setFile(e.target.files[0])}
+                  type="file"
+                  id="file"
+                />
               </div>
               <div class="mb-6">
                 <button

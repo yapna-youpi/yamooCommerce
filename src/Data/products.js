@@ -235,7 +235,7 @@ const products = [
     id: "10",
     productName: "Kiti",
     imgUrl: productImg10,
-    category: "populaire",
+    category: "magazine",
     price: 2800,
     epub: 1,
     shortDesc:
@@ -259,7 +259,7 @@ const products = [
     id: "11",
     productName: "Muna",
     imgUrl: productImg11,
-    category: "populaire",
+    category: "magazine",
     price: 2800,
     epub: 1,
     shortDesc:

@@ -7,6 +7,9 @@ import logo2 from "../../../Data/livre_affiche/porc.jpeg"
 import logo3 from "../../../Data/livre_affiche/remi.jpeg"
 import logo4 from "../../../Data/livre_affiche/tamtam.jpeg"
 import logo5 from "../../../Data/livre_affiche/voiture.jpeg"
+import logo6 from "../../../Data/livre_affiche/lula.png"
+import logo7 from "../../../Data/livre_affiche/main.jpeg"
+import logo8 from "../../../Data/livre_affiche/magapche.png"
 // import logo7 from "../assets/le_tamtam_magique.PNG"
 
 import "swiper/swiper-bundle.css";
@@ -55,6 +58,26 @@ function More() {
               />
             </SwiperSlide>
             <SwiperSlide>
+              <a href="https://www.amazon.fr/LULA-aime-livres-Boudjeka-KAMTO-ebook/dp/B0CFB452MP/ref=mp_s_a_1_1?crid=3GBS56R5YQAT3&keywords=lula+aime+les+livres&qid=1692008040&sprefix=%2Caps%2C215&sr=8-1" target="_blank">
+              <img
+                className="image-banner cursor-pointer"
+                src={logo8}
+                alt="la voiture"
+              />
+              </a>
+              
+            </SwiperSlide>
+            <SwiperSlide>
+              <a href="https://www.amazon.fr/LULA-aime-livres-Boudjeka-KAMTO-ebook/dp/B0CFB452MP/ref=mp_s_a_1_1?crid=3GBS56R5YQAT3&keywords=lula+aime+les+livres&qid=1692008040&sprefix=%2Caps%2C215&sr=8-1" target="_blank">
+              <img
+                className="image-banner cursor-pointer"
+                src={logo7}
+                alt="la voiture"
+              />
+              </a>
+              
+            </SwiperSlide>
+            <SwiperSlide>
               <img
                 className="image-banner cursor-pointer"
                 src={logo3}
@@ -66,6 +89,16 @@ function More() {
               <img
                 className="image-banner cursor-pointer"
                 src={logo4}
+                alt="la voiture"
+              />
+              </a>
+              
+            </SwiperSlide>
+            <SwiperSlide>
+              <a href="https://www.amazon.fr/LULA-aime-livres-Boudjeka-KAMTO-ebook/dp/B0CFB452MP/ref=mp_s_a_1_1?crid=3GBS56R5YQAT3&keywords=lula+aime+les+livres&qid=1692008040&sprefix=%2Caps%2C215&sr=8-1" target="_blank">
+              <img
+                className="image-banner cursor-pointer"
+                src={logo6}
                 alt="la voiture"
               />
               </a>
