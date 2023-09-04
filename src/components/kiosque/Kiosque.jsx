@@ -25,7 +25,7 @@ const Kiosque = () => {
         <div class="w-full mx-auto container sm:flex">
           <div className='w-full'>
             <h2 className='text-xl md:text-3xl pl-10 font-bold'>Vos magazines Populaires</h2>
-            <div class="w-full px-7 md:px-12 sm:flex justify-around pb-10 md:mt-16">
+            <div class="w-full px-7 md:px-12 sm:flex flex-wrap justify-around pb-10 md:mt-16">
               {productPopular.map((item, index) => (
                 <KiosqueCard data={item} index={index} />
               ))}

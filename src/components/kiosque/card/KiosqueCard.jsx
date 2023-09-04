@@ -10,7 +10,7 @@ function KiosqueCard({data, index}) {
     const history = useHistory()
 
   return (
-    <div class="w-64 md:w-96 mx-auto pt-10 md:pt-1">
+    <div class="w-full sm:w-5/12 md:w-3/12   mx-auto pt-10 md:pt-1">
       <Modals open={open} onCloseModal={handleClose} center>
         <img
           alt={data.productName}
@@ -46,7 +46,7 @@ function KiosqueCard({data, index}) {
         </div>
       </Modals>
 
-      <div class="bg-white shadow-md border border-gray-200 rounded-lg w-64 md:w-96 dark:bg-gray-800 dark:border-gray-700">
+      <div class="bg-white shadow-md border border-gray-200 rounded-lg  dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
           <img
             onClick={() => setOpen(true)}
@@ -55,7 +55,7 @@ function KiosqueCard({data, index}) {
             alt={data.productName}
           />
         </a>
-        <div class="p-5 w-64 md:w-96">
+        <div class="p-5 w-full">
           <a href="#">
             <h5 class="text-gray-900 font-bold text-2xl tracking-tight mb-2 dark:text-white">
               {data.productName}
