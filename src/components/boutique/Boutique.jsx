@@ -24,8 +24,8 @@ const Boutique = () => {
         {/* <!-- Remove py-8 --> */}
         <div class="mx-auto container py-8 mx-15">
           <div>
-            <h2 className='text-xl md:text-3xl font-bold'>Catégories Populaires</h2>
-            <div class="flex flex-wrap items-center lg:justify-between justify-center pb-10 mt-16">
+            <h2 className='text-xl md:text-3xl pl-16 font-bold'>Catégories Populaires</h2>
+            <div class="flex flex-wrap items-center lg:justify-between justify-center pb-10 mt-10 md:mt-5">
               {productPopular.map((item, index) => (
                 <BoutiqueCard data={item} index={index} />
               ))}

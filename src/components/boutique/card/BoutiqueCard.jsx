@@ -12,7 +12,7 @@ const BoutiqueCard = ({data}) => {
   const history = useHistory()
 
   return (
-    <div tabindex="0" class="focus:outline-none mx-2 w-72 xl:mb-0 mb-8">
+    <div tabindex="0" class="focus:outline-none mx-2 w-72 xl:mb-0 mb-8 md:mt-8">
       <Modals open={open} onCloseModal={handleClose} center>
         <img
           alt={data.productName}
@@ -54,7 +54,7 @@ const BoutiqueCard = ({data}) => {
           class="focus:outline-none w-full h-44 cursor-pointer"
         />
       </div>
-      <div class="bg-white">
+      <div class="bg-white shadow-lg hover:shadow-2xl">
         <div class="flex items-center justify-between px-4 pt-4">
           <div>
             <svg
