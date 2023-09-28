@@ -1,5 +1,4 @@
-import React, { useState,useEffect, Link } from "react";
-import User from './User'
+import React, { useState,useEffect, Link,useRef } from "react";
 import {
   UilEnvelope,
   UilPhone,
@@ -10,10 +9,13 @@ import {
   UilUser,
   UilMapPin,
   UilNewspaper , 
+  UilSignin,
+  UilSignout,
+  UilSignOutAlt
 } from "@iconscout/react-unicons";
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-
+import { signOut } from "firebase/auth";
+import { auth } from "../../firebase.config";
+import labon from "./assets/favicon.ico"
 
 // import Logo from "./assets/Logo.png";
 import MobileLogo from "./assets/mobileLogo.png";
@@ -21,12 +23,17 @@ import { useHistory } from "react-router-dom";
 import Banner from "../home/slider1/Banner";
 import slides from '../../info.json'
 import LogoBooks from "./assets/book2.png"
+import UseAuthe from "../../custom-hooks/UseAuthe";
 
 function Header() {
 
+  const{currentUser} = UseAuthe()
   const [closeBtn, setCloseBtn] = useState(false);
   const [doc, setDoc] = useState(false);
   const menuref = React.createRef();
+  const profileRef = useRef(null);
+  const [showCompte, setShowCompte] = useState(false) 
+
   let History = useHistory();
 
   const handleClose = () => {
@@ -41,7 +48,6 @@ function Header() {
     setCloseBtn(!closeBtn);
   };
   const choseImage = () => window.innerWidth <= 700;
-  console.log(choseImage());
 
   const data = {
     element: 1
@@ -50,11 +56,18 @@ function Header() {
   const handleDropDown = (e)=>{
     e.preventDefault()
     setDoc(!doc)
-    // setTimeout(() => {
-    //   setDoc(false)
-    // }, 5000);
-    console.log('le doc lance')
   }
+
+  //fction to show profile
+  const actionProfile = () => {
+    profileRef.current.classList.toggle("show_profile");
+  };
+
+  //fction to logout
+  const Logout = () => {
+    signOut(auth);
+    History.push("/");
+  };
   
 
   return (
@@ -76,8 +89,36 @@ function Header() {
           className="hidden md:block cursor-pointer  text-gray-200 py-7  md:w-1/12 items-center flex-col"
         >
           {/* s */}
-          <UilUser size="60" color="#ffffff" />
-          <h3>Compte</h3>
+          <UilUser onClick={()=>setShowCompte(!showCompte)} size="60" color="#ffffff" />
+          <h3 onClick={()=>setShowCompte(!showCompte)}>Compte</h3>
+          <div>
+            <span>
+              <div className="profile">
+                {/* <img
+                  onClick={actionProfile}
+                  // src={currentUser ? UilEnvelope : UilEnvelope}
+                  src={labon}
+                  alt="user"
+                /> */}
+
+              { showCompte ? 
+                <div
+                className="profile_actions absolute mt-1 w-28  "
+                ref={profileRef}
+                onClick={actionProfile}
+              >
+                {currentUser ? (
+                  <span onClick={Logout} className="p-2 bg-orange-200 rounded-md text-black">Logout</span>
+                ) : (
+                  <div className="flex mobile_list rounded-md bg-orange-200 text-black items-center flex-col">
+                    <span className="hover:font-bold my-1 flex items-center justify-around" onClick={() => nav("/login")}><UilSignOutAlt size="18"/>  Signup</span>
+                    <span className="hover:font-bold my-1 flex items-center justify-around" onClick={() => nav("/signup")}><UilSignin size="18" /> Login</span>
+                  </div>
+                )}
+              </div> : ""}
+              </div>
+            </span>
+          </div>
         </div>
       </div>
 
@@ -90,23 +131,42 @@ function Header() {
                       hover:bg-contain md:bg-inherit py-7 md:py-0 px-15"
           >
             <ul className="md:flex md:text-darker font-bold md:justify-between items-center">
-              <li onClick={() => nav("/")}  className="menu-li">
+              <li onClick={() => nav("/")} className="menu-li">
                 ACCEUIL
                 <div className="rounded-full w-10 h-10 flex justify-center items-center bg-cyan-600 md:hidden">
                   <UilHome />
                 </div>
               </li>
-              <li onClick={handleDropDown}  className="menu-li" id="drop_list">
+              <li onClick={handleDropDown} className="menu-li" id="drop_list">
                 SERVICES
                 {doc && (
                   <div className="absolute py-2  text-black  hover:text-black left-20 top-60 md:left-1/4 drop-shadow-2xl bg-white md:top-14">
-                     <svg class="absolute bottom-full left-1/3 " width="30" height="20" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg">
-                        <polygon points="15, 0 30, 20 0, 20" fill="#ffffff"/>
+                    <svg
+                      class="absolute bottom-full left-1/3 "
+                      width="30"
+                      height="20"
+                      viewBox="0 0 30 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <polygon points="15, 0 30, 20 0, 20" fill="#ffffff" />
                     </svg>
                     <ul className="">
-                      <li className="hover:bg-gray-100 px-3" onClick={() => nav("/librairie")}  >Librairie</li>
-                      <li className="hover:bg-gray-100 px-3" onClick={() => nav("/kiosque")} >Kiosque</li>
-                      <li className="hover:bg-gray-100 px-3" onClick={() => nav("/contact")}>
+                      <li
+                        className="hover:bg-gray-100 px-3"
+                        onClick={() => nav("/librairie")}
+                      >
+                        Librairie
+                      </li>
+                      <li
+                        className="hover:bg-gray-100 px-3"
+                        onClick={() => nav("/kiosque")}
+                      >
+                        Kiosque
+                      </li>
+                      <li
+                        className="hover:bg-gray-100 px-3"
+                        onClick={() => nav("/contact")}
+                      >
                         Soumettre un manuscrit
                       </li>
                     </ul>
@@ -116,15 +176,6 @@ function Header() {
                   <UilShoppingCartAlt />
                 </div>
               </li>
-              {/* <li
-                onClick={() => nav("/kiosque")}
-                className="menu-li"
-              >
-                KIOSQUE
-                <div className="rounded-full w-10 h-10 flex justify-center items-center bg-cyan-600 md:hidden">
-                  <UilNewspaper />
-                </div>
-              </li> */}
               <li onClick={() => nav("/contact")} className="menu-li">
                 CONTACT
                 <div className="rounded-full w-10 h-10 flex justify-center items-center bg-cyan-600 md:hidden">
@@ -136,6 +187,7 @@ function Header() {
                 <div className="rounded-full w-10 h-10 flex justify-center items-center bg-cyan-600 md:hidden">
                   <UilUser />
                 </div>
+                <div></div>
               </li>
             </ul>
           </div>

@@ -1,41 +1,75 @@
-import React, { useState } from 'react'
-import Signup from '../signup/Signup';
+import React, { useState, useRef } from "react";
+import Signup from "../signup/Signup";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase.config";
+import { toast } from "react-toastify";
+import { useHistory, useParams } from "react-router-dom";
 
 function Login() {
-
-  const [loginEmail, setLoginEmail] = useState('')
-  const [loginPassword, setLoginPassword] = useState('')
-
+  const [loginEmail, setLoginEmail] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
+  
+const {id} = useParams()
   const [moon, setMoon] = useState(false);
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
+  const signref = useRef();
+  const navigate = useHistory();
+  const [ispassWord, setIspassword] = useState(true)
 
-    const colorTheme = () =>{
-        setMoon(!moon);
-        document.getElementById('banner').classList.toggle('banner')
-        document.getElementById('banner').classList.toggle('banner2')
+  //fnction to start login
+  const signin = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        loginEmail,
+        loginPassword
+      );
+      const user = userCredential.user;
+
+      console.log(user);
+      setLoading(false);
+      toast.success(`Bienvenue ${user.displayName}`);
+      navigate("/");
+    } catch (error) {
+      setLoading(false);
+      toast.error("Quelque chose à mal fonctionner");
     }
 
-    const formBx = document.querySelector('.formBx');
-     //function to permute signin to signup
+    document.getElementById("signref").reset();
+  };
+
+  //function to change color theme
+  const colorTheme = () => {
+    setMoon(!moon);
+    document.getElementById("banner").classList.toggle("banner");
+    document.getElementById("banner").classList.toggle("banner2");
+  };
+
+  const formBx = document.querySelector(".formBx");
+  //function to permute signin to signup
   const handleSignup = function () {
-    let sign = document.querySelector('.sign')
-    let formBx = document.querySelector('.formBx');
-    
-    formBx.classList.add('activer');
-    sign.classList.add('activer');
-    if (formBx.classList.contains('desactiver')) {
-      formBx.classList.toggle('desactiver');
+    let sign = document.querySelector(".sign");
+    let formBx = document.querySelector(".formBx");
+
+    formBx.classList.add("activer");
+    sign.classList.add("activer");
+    if (formBx.classList.contains("desactiver")) {
+      formBx.classList.toggle("desactiver");
     }
-  }
+  };
   //function to permute signup to signin
   const handleSignin = function () {
-    let sign = document.querySelector('.sign')
-    let formBx = document.querySelector('.formBx');
+    let sign = document.querySelector(".sign");
+    let formBx = document.querySelector(".formBx");
 
-    formBx.classList.remove('activer');
-    sign.classList.remove('activer');
-    formBx.classList.add('desactiver');
-  }
+    formBx.classList.remove("activer");
+    sign.classList.remove("activer");
+    formBx.classList.add("desactiver");
+  };
+  
 
   return (
     <div>
@@ -43,57 +77,70 @@ function Login() {
         <div className="contain">
           <div className="blueBg">
             <div className="boxe signin">
-              <h2 className="">Already Have An Account ?</h2>
+              <h2 className="">Vous avez déjà un compte ?</h2>
               <button onClick={handleSignin} className="signinBtn">
-                Sign In
+                Connexion
               </button>
             </div>
             <div className="boxe signup ">
-              <h2>Don't Have An Account ?</h2>
+              <h2>Vous n'avez pas de compte ?</h2>
               <button onClick={handleSignup} className="signupBtn">
-                Sign Up
+                Inscription
               </button>
             </div>
           </div>
 
           <div className="formBx">
             <div className="form signinForm">
-              <form>
+              <form onSubmit={signin} id="signref" ref={signref}>
                 <div className="formGroup">
-                  <p className="text_form">Username</p>
+                  <p className="text_form">Mail d'utilisateur</p>
                   <input
                     type="email"
                     name="email"
                     value={loginEmail}
+                    required
                     onChange={(e) => setLoginEmail(e.target.value)}
-                    placeholder="Online"
+                    placeholder="Email"
                   />
                   <i class="ri-user-fill"></i>
                 </div>
                 <div className="formGroup">
-                  <p className="text_form">Password</p>
+                  <p className="text_form">Mot de passe</p>
                   <input
-                    type="password"
+                    type={ispassWord ? "password" : "text"}
                     name="password"
+                    required
                     value={loginPassword}
                     onChange={(e) => setLoginPassword(e.target.value)}
                     placeholder="......"
                   />
-                  <i class="ri-mail-fill"></i>
+                  {ispassWord ? (
+                    <i
+                      class="ri-lock-2-fill"
+                      onClick={() => setIspassword(!ispassWord)}
+                    ></i>
+                  ) : (
+                    <i
+                      class="ri-lock-unlock-fill"
+                      onClick={() => setIspassword(!ispassWord)}
+                    ></i>
+                  )}
                   <input
                     type="submit"
                     name="submit"
+                    required
                     className="btnSingin"
-                    value="Singn In"
+                    value={loading ? "Chargement....." : "Connexion"}
                   />
                 </div>
                 <a href="#" className="forgot">
-                  Forget Password
+                  Mot de passe Oublié
                 </a>
               </form>
             </div>
 
-            <Signup setLoading={setLoading} />
+            <Signup setLoading={setLoading} handleSignin={handleSignin} />
           </div>
         </div>
       </div>
@@ -101,4 +148,4 @@ function Login() {
   );
 }
 
-export default Login
+export default Login;
