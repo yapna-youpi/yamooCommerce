@@ -9,9 +9,10 @@ import products from "../../Data/products";
 import lula from '../../Data/livres/epub/Lula.epub'
 import kiti from '../../Data/livres/epub/kiti.epub'
 import muna from '../../Data/livres/epub/Muna.epub'
-import flaubert from '../../Data/livres/epub/flaubert.epub'
+import regard from '../../Data/livres/epub/regard.epub'
+import malep from '../../Data/livres/epub/malep.epub'  
 
-const livre_epub = [0,0,0,lula,0,0,0,0,0,0,kiti,muna,flaubert]
+const livre_epub = [0,0,0,lula,0,0,0,0,0,0,kiti,muna,regard,malep]
 
 const LivreDetail = (props) => {
   const locat = useLocation().pathname.substr(11);

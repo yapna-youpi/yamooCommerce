@@ -17,6 +17,7 @@ import Auteur from './auteur/Auteur';
 
 function Home() {
     React.useEffect(() => {
+        window.scrollTo(0,0)
         AOS.init({
           scrollContainer: "#approot",
           duration: 1000,

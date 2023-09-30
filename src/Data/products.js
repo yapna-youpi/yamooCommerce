@@ -9,7 +9,8 @@ import productImg08 from "./livres/tortue.png";
 import productImg09 from "./livres/voiture.png";
 import productImg10 from "./livres/Kiti.png";
 import productImg11 from "./livres/Muna.png";
-import productImg12 from "./livres/flaubert.png";
+import productImg12 from "./livres/regard.png";
+import productImg13 from "./livres/malep.png";
 
 import livre03 from '../Data/livres/epub/Lula.epub'
 import livre10 from '../Data/livres/epub/Lula.epub'
@@ -283,9 +284,9 @@ const products = [
   },
   {
     id: "12",
-    productName: "flaubert",
+    productName: "regard",
     imgUrl: productImg12,
-    category: "magazine",
+    category: "press",
     price: 1900,
     epub: 1,
     shortDesc:
@@ -303,7 +304,31 @@ const products = [
       },
     ],
     years: 4.7,
-    author: "gustave flaubert",
+    author: "Boudjeka KAMTO",
+  },
+  {
+    id: "13",
+    productName: "malep",
+    imgUrl: productImg13,
+    category: "press",
+    price: 1900,
+    epub: 1,
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+    reviews: [
+      {
+        rating: 4.6,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+      {
+        rating: 4.9,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+    ],
+    years: 4.7,
+    author: "Boudjeka KAMTO",
   }
 ];
 

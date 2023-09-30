@@ -36,9 +36,10 @@ function Footer() {
             <div className=" md:w-5/12  text-left md:px-10 md:py-5 ">
               <div className="py-5 pl-12">
                 <img
-                  className="w-32 h-32 md:w-48 md:h-36 "
+                  className="w-32 h-32 md:w-48 md:h-36 cursor-pointer"
                   src={MobileLogo}
                   alt="la maison du polar"
+                  onClick={()=>History.push("/home")}
                 />
               </div>
               <p className=" md:mt-2">

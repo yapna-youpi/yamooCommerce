@@ -1,4 +1,4 @@
-import React, { useState,useEffect, Link,useRef } from "react";
+import React, { useState, useEffect, Link, useRef } from "react";
 import {
   UilEnvelope,
   UilPhone,
@@ -8,31 +8,30 @@ import {
   UilShoppingCartAlt,
   UilUser,
   UilMapPin,
-  UilNewspaper , 
+  UilNewspaper,
   UilSignin,
   UilSignout,
-  UilSignOutAlt
+  UilSignOutAlt,
 } from "@iconscout/react-unicons";
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebase.config";
-import labon from "./assets/favicon.ico"
+import labon from "./assets/favicon.ico";
 
 // import Logo from "./assets/Logo.png";
 import MobileLogo from "./assets/mobileLogo.png";
 import { useHistory } from "react-router-dom";
 import Banner from "../home/slider1/Banner";
-import slides from '../../info.json'
-import LogoBooks from "./assets/book2.png"
+import slides from "../../info.json";
+import LogoBooks from "./assets/book2.png";
 import UseAuthe from "../../custom-hooks/UseAuthe";
 
 function Header() {
-
-  const{currentUser} = UseAuthe()
+  const { currentUser } = UseAuthe();
   const [closeBtn, setCloseBtn] = useState(false);
   const [doc, setDoc] = useState(false);
   const menuref = React.createRef();
   const profileRef = useRef(null);
-  const [showCompte, setShowCompte] = useState(false) 
+  const [showCompte, setShowCompte] = useState(false);
 
   let History = useHistory();
 
@@ -50,13 +49,13 @@ function Header() {
   const choseImage = () => window.innerWidth <= 700;
 
   const data = {
-    element: 1
-  }
+    element: 1,
+  };
   //functiont to open dropdown
-  const handleDropDown = (e)=>{
-    e.preventDefault()
-    setDoc(!doc)
-  }
+  const handleDropDown = (e) => {
+    e.preventDefault();
+    setDoc(!doc);
+  };
 
   //fction to show profile
   const actionProfile = () => {
@@ -68,14 +67,13 @@ function Header() {
     signOut(auth);
     History.push("/");
   };
-  
 
   return (
     <div className="header ">
       <div className="header-top p-6 md:p-0 w-full  text-white md:rounded-b-3xl   px-5 md:relative md:px-10 flex justify-between items-center ">
         <div className="logo md:h-16 md:-translate-y-7 md:translate-x-10 md:w-2/12">
           <img
-            onClick={() => History.push("/")}
+            onClick={() => History.push("/home")}
             className="cursor-pointer logo-polar w-32 h-16 md:w-24 md:h-24"
             src={MobileLogo}
             alt="la maison du polar"
@@ -84,13 +82,13 @@ function Header() {
         <div className="hidden md:block md:w-7/12">
           <Banner data={1} Logo={LogoBooks} slides={slides} />
         </div>
-        <div
-          onClick={() => nav("/login")}
-          className="hidden md:block cursor-pointer  text-gray-200 py-7  md:w-1/12 items-center flex-col"
-        >
-          {/* s */}
-          <UilUser onClick={()=>setShowCompte(!showCompte)} size="60" color="#ffffff" />
-          <h3 onClick={()=>setShowCompte(!showCompte)}>Compte</h3>
+        <div className="hidden md:block cursor-pointer  text-gray-200 py-7  md:w-1/12 items-center flex-col">
+          <UilUser
+            onClick={() => setShowCompte(!showCompte)}
+            size="60"
+            color="#ffffff"
+          />
+          <h3 onClick={() => setShowCompte(!showCompte)}>Compte</h3>
           <div>
             <span>
               <div className="profile">
@@ -101,21 +99,39 @@ function Header() {
                   alt="user"
                 /> */}
 
-              { showCompte ? 
-                <div
-                className="profile_actions absolute mt-1 w-28  "
-                ref={profileRef}
-                onClick={actionProfile}
-              >
-                {currentUser ? (
-                  <span onClick={Logout} className="p-2 bg-orange-200 rounded-md text-black">Logout</span>
-                ) : (
-                  <div className="flex mobile_list rounded-md bg-orange-200 text-black items-center flex-col">
-                    <span className="hover:font-bold my-1 flex items-center justify-around" onClick={() => nav("/login")}><UilSignOutAlt size="18"/>  Signup</span>
-                    <span className="hover:font-bold my-1 flex items-center justify-around" onClick={() => nav("/signup")}><UilSignin size="18" /> Login</span>
+                {showCompte ? (
+                  <div
+                    className="profile_actions absolute mt-1 w-28  "
+                    ref={profileRef}
+                    onClick={actionProfile}
+                  >
+                    {currentUser ? (
+                      <span
+                        onClick={Logout}
+                        className="p-2 bg-orange-200 rounded-md text-black"
+                      >
+                        Logout
+                      </span>
+                    ) : (
+                      <div className="flex mobile_list rounded-md bg-orange-200 text-black items-center flex-col">
+                        <span
+                          className="hover:font-bold my-1 flex items-center justify-around"
+                          onClick={() => nav("/login/1")}
+                        >
+                          <UilSignOutAlt size="18" /> Signup
+                        </span>
+                        <span
+                          className="hover:font-bold my-1 flex items-center justify-around"
+                          onClick={() => nav("/login/0")}
+                        >
+                          <UilSignin size="18" /> Login
+                        </span>
+                      </div>
+                    )}
                   </div>
+                ) : (
+                  ""
                 )}
-              </div> : ""}
               </div>
             </span>
           </div>
@@ -131,7 +147,7 @@ function Header() {
                       hover:bg-contain md:bg-inherit py-7 md:py-0 px-15"
           >
             <ul className="md:flex md:text-darker font-bold md:justify-between items-center">
-              <li onClick={() => nav("/")} className="menu-li">
+              <li onClick={() => nav("/home")} className="menu-li">
                 ACCEUIL
                 <div className="rounded-full w-10 h-10 flex justify-center items-center bg-cyan-600 md:hidden">
                   <UilHome />
@@ -182,7 +198,7 @@ function Header() {
                   <UilMapPin />
                 </div>
               </li>
-              <li onClick={() => nav("/login")} className="menu-li">
+              <li onClick={() => nav("/login/0")} className="menu-li">
                 COMPTE
                 <div className="rounded-full w-10 h-10 flex justify-center items-center bg-cyan-600 md:hidden">
                   <UilUser />

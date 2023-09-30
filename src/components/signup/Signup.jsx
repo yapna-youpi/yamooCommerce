@@ -17,7 +17,7 @@ const Signup = ({ handleSignin }) => {
   const [isPassword, setIsPassword] = useState(true)
 
   //function to active upload file
-  const handleFile = () => {
+  const handleFile = ({ handleSignin }) => {
     document.getElementById("file").click();
     const selectedFile = document.getElementById("file").files[0];
     setFile(selectedFile);

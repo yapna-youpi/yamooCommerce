@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Signup from "../signup/Signup";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase.config";
@@ -8,13 +8,13 @@ import { useHistory, useParams } from "react-router-dom";
 function Login() {
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
-  
-const {id} = useParams()
+
+  const { id } = useParams();
   const [moon, setMoon] = useState(false);
   const [loading, setLoading] = useState(false);
   const signref = useRef();
   const navigate = useHistory();
-  const [ispassWord, setIspassword] = useState(true)
+  const [ispassWord, setIspassword] = useState(true);
 
   //fnction to start login
   const signin = async (e) => {
@@ -32,7 +32,7 @@ const {id} = useParams()
       console.log(user);
       setLoading(false);
       toast.success(`Bienvenue ${user.displayName}`);
-      navigate("/");
+      navigate.push("/");
     } catch (error) {
       setLoading(false);
       toast.error("Quelque chose à mal fonctionner");
@@ -69,8 +69,18 @@ const {id} = useParams()
     sign.classList.remove("activer");
     formBx.classList.add("desactiver");
   };
-  
 
+  useEffect(() => {
+    window.scrollTo(0,200)
+    // window.screenTop(0,0)
+    if (id == 1) {
+      setTimeout(() => {
+        handleSignup();
+      }, 300);
+
+    }
+  }, []);
+  // console.log("le id", id)
   return (
     <div>
       <div className="sign">

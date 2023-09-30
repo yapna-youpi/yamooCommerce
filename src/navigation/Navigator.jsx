@@ -15,23 +15,24 @@ import Error from '../components/Error/404';
 import Kiosque from '../components/kiosque/Kiosque';
 import LivreDetail from '../components/livreDetail/LivreDetail';
 import UseAuthe from "../custom-hooks/UseAuthe"
+import Acceuil from "../components/home/acceuil/Acceuil"
 
 function Main({ User, Country }) {
     
     const { currentUser } = UseAuthe()
     const checkUser = C => currentUser ? C : () => <Redirect to="/login" />
-    const checkAccount = C => User.userEmail.includes('') ? C : () =><> </>
-    console.log("le current user", currentUser)
-    // console.log("the User ", User)
+    const checkAccount = C => currentUser ? C : () => <Redirect to="/acceuil" />
+    
     return (
         <div className="main">
             <Router>
                 { <Header />}
                 <Switch>
-                    <Route path='/' exact component={Home} />
-                    <Route path='/home' exact component={Home} />
-                    <Route path='/contact' exact component={Contact} />
-                    <Route path='/login' exact component={Login} />
+                    <Route path='/' exact component={Acceuil} />
+                    <Route path='/acceuil' exact component={Acceuil} />
+                    <Route path='/home' exact component={checkAccount(Home)} />
+                    <Route path='/contact' exact component={checkAccount(Contact)} />
+                    <Route path='/login/:id' exact component={Login} />
                     <Route path='/librairie' exact component={checkUser(Boutique)} />
                     <Route path='/librairie/:id' exact component={LivreDetail} />
                     <Route path='/histoire' exact component={checkUser(Histoire)} />

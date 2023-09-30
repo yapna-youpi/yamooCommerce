@@ -2,13 +2,13 @@ import React from 'react'
 // import {UisStar } from "@iconscout/react-unicons-solid  "
 import { powerTable } from '../../../Utils'
 
-function Card({ data, imag, value,url }) {
+function Card({ data, imag, value,url,hauteur }) {
 
   return (
     <div className="carte shadow-lg md:shadow-none md:hover:shadow-lg sm:w-full md:w-6/12 lg:w-3/12  mx-auto border cursor-pointer">
       <a target="_blank" href={url}>
         <img
-          className="img-produits w-full  h-64  lg:w-70 md:bject-cover md:object-center md:group-hover:opacity-75"
+          className={`img-produits w-full lg:w-70 md:bject-cover md:object-center md:group-hover:opacity-75 + ${hauteur}`}
           src={imag}
           alt="Olive drab green ."
         />
