@@ -8,7 +8,7 @@ const Boutique = () => {
   const [productBestSeller, setProductBestSeller] = useState([])
   
   useEffect(() => {
-    window.scrollTo(0,200)
+    window.scrollTo(0,0)
 
     const filteredPopular = () => produits.filter(item => item.category == "populaire")
     const filteredBestSeller = () => produits.filter(item => item.category == "bestSeller")
