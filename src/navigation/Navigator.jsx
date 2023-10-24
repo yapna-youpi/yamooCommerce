@@ -20,7 +20,7 @@ import Acceuil from "../components/home/acceuil/Acceuil"
 function Main({ User, Country }) {
     
     const { currentUser } = UseAuthe()
-    const checkUser = C => currentUser ? C : () => <Redirect to="/login" />
+    const checkUser = C => currentUser ? C : () => <Redirect to="/login/0" />
     const checkAccount = C => currentUser ? C : () => <Redirect to="/acceuil" />
     
     return (

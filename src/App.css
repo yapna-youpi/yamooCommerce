@@ -47,8 +47,11 @@
 }
 
 .home {
+  color: white;
   /* width: 100%; */
   background: url("./components/home/assets/bg.jpg");
+  /* background-color: #03164b;
+  /* background-color: #04102f; */
   background-size: cover;
 }
 
@@ -701,7 +704,6 @@ input[type='file'] {
 
   .banner .swiper-pagination-bullets {
     position: absolute;
-
   }
 
   .bgi {

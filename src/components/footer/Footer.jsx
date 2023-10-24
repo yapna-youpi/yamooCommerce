@@ -56,7 +56,7 @@ function Footer() {
                 onClick={() => History.push("/home")}
               />
             </div>
-            <p className=" md:mt-2">
+            <p className=" md:mt-2 text-xs">
               Gribouillage-Press est un groupe d’édition et de presse qui compte
               en son sein quatre maisons d’édition spécialisés chacune dans un
               domaine précis : - Griboui’age Editions pour la littérature

@@ -21,7 +21,7 @@ function Footer() {
     return (
       <div className="footer relative font-bold">
         <footer>
-          <div className="footer-content md:h-56 pl-5 pr-4 md:pl-0 md:pr-0 md:pb-7 flex flex-col w-full md:rounded-t-3xl  text-leight md:flex-row md:justify-around  ">
+          <div className="footer-content md:h-56 pl-5 pr-4 md:pl-0 md:pr-0 md:pb-7 flex flex-col w-full   text-leight md:flex-row md:justify-around  ">
             <div className=" md:w-/12  text-left md:px-10 md:py-5 ">
               <div className="py-5 pl-12">
                 <img

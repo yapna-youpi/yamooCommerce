@@ -73,7 +73,7 @@ function LoginAcceuil() {
 
   return (
     <div>
-      <div className="w-full flex justify-center items-center" id="connect">
+      <div className="w-full text-black flex justify-center items-center" id="connect">
         <div className="contain_acceuil">
           <div className="formBx relative z-0 h-96">
             <div className="form">
