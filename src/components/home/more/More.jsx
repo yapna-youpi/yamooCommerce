@@ -8,7 +8,7 @@ import logo3 from "../../../Data/livre_affiche/remi.jpeg"
 import logo4 from "../../../Data/livre_affiche/tamtam.jpeg"
 import logo5 from "../../../Data/livre_affiche/voiture.jpeg"
 import logo6 from "../../../Data/livre_affiche/lula.png"
-import logo7 from "../../../Data/livre_affiche/main.jpeg"
+import logo7 from "../../../Data/livre_affiche/main.jpg"
 import logo8 from "../../../Data/livre_affiche/magapche.png"
 // import logo7 from "../assets/le_tamtam_magique.PNG"
 

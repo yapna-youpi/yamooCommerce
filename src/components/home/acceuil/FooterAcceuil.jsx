@@ -34,8 +34,9 @@ function Footer() {
               </div>
               <br />
             </div>
-            <div className=" md:w-2/12 mt-4 md:mt-0  md:px-5 md:pt-16 ">
-              <b>À propos</b>
+            <div className=" md:w-3/12 mt-4 md:mt-0  md:px-5 md:pt-16 ">
+              <b>Qui Sommes Nous?</b>
+              <p className='mt-3'>Gribouillage press est un groupe d'Edition et de Presse qui compte en son sein quatre maisons d'editions et autant de periodiques.</p>
             </div>
             <div className="md:w-3/12 relative mt-4 md:mt-0 md:px-5 md:pt-16">
               <b>Suivez-nous</b>

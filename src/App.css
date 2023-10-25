@@ -47,7 +47,7 @@
 }
 
 .home {
-  color: white;
+  /* color: white; */
   /* width: 100%; */
   background: url("./components/home/assets/bg.jpg");
   /* background-color: #03164b;
@@ -493,19 +493,22 @@ input[type='file'] {
     filter: brightness(100%) contrast(100%) saturate(0.6) blur(0) hue-rotate(0deg);
 }
 .bgfi{
-  height: 750px!important;
+  position: relative;
+  height: 800px!important;
   background: url("./Data/images/texture.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 .bg_argo{
+  position: absolute!important;
+  bottom: 0!important;
   background: url("./Data/images/bg_argo.jpg");
   background-size: contain;
   box-shadow: #ffea00 0px 5px 15px;                
 }
 .zig{
   color: white;
-  text-shadow: 0 0 5px #ffea00, 0 0 25px #ffea00, 0 0 50px #ffea00, 0 0 100px #ffea00;
+  text-shadow: 0 0 5px #0a206e, 0 0 25px #1756ad, 0 0 50px #0a206e, 0 0 100px #bdaf14;
 }
 .btn_go{
   background-color: initial;
@@ -534,8 +537,9 @@ input[type='file'] {
 }
 
 .btn_go:hover {
+  color: #0a206e;
   background: transparent;
-  border: 1px solid white;
+  border: 1px solid #0a206e;
 }
 .btn_po{    
   background-color: initial;
@@ -574,6 +578,9 @@ input[type='file'] {
 }
 
 @media only screen and (max-width: 991px) {
+  .bg_argo{
+    display: none;               
+  }
   .btn_go{
     font-size: 14px;
     height: 55px;
@@ -587,7 +594,7 @@ input[type='file'] {
     width: 100px;
   }
   .bgfi{
-    height: 400px!important;
+    height: 200px!important;
   }
   .btnacceuil {
     width: auto;
@@ -723,4 +730,7 @@ input[type='file'] {
 
 .histoire {
   background: url("./components/home/assets/bg.jpg");
+}
+.text_acceuil{
+  color: #1E3A8A;
 }
